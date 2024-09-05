@@ -81,7 +81,19 @@ body, html {height: 100%}
         <button class="w3-button w3-black" onclick="ejecutarProcesamiento()">Ejecutar</button>
         <button class="w3-button w3-black" onclick="mostrarResultado()">Resultado más reciente</button>
       </p>
-      <div id="resultado" class="w3-container w3-padding-16"></div>
+      <div id="resultado" class="w3-container w3-padding-16">
+        <table class="w3-table w3-bordered w3-striped w3-white">
+            <thead>
+                <tr>
+                    <th>Jugador</th>
+                    <th>Puntos</th>
+                </tr>
+            </thead>
+            <tbody id="resultados-table-body">
+                <!-- Las filas serán generadas dinámicamente -->
+            </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </div>

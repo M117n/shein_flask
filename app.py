@@ -77,6 +77,18 @@ def create_log(player, points, types):
     except Exception as e:
         print(f"Error creating log for {player}: {e}")
 
+def log_statistic():
+    try:
+        if os.path.exists(LOG_DIRECTORY):
+            log_df = pd.read_csv(LOG_DIRECTORY)
+        else:
+            log_df = pd.DataFrame(columns=['Jugador', 'Fecha', 'Hora', 'Puntos', 'Tipo'])
+
+        group_log_df = log_df.groupby('Jugador')
+
+    except Exception as e:
+        print("Error creando estadistica")
+
 def to_excel(df):
     try:
         df.to_excel(f'Resultados_{datetime.date.today()}.xlsx', index=False)
