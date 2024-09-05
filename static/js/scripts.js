@@ -1,5 +1,11 @@
 async function ejecutarProcesamiento() {
-    const puntos = document.getElementById('puntosInput').value;
+    let puntos = document.getElementById('puntosInput').value;
+
+    // Limpieza de los datos: eliminar líneas vacías y espacios innecesarios
+    puntos = puntos.split('\n').map(line => line.trim()).filter(line => line !== '').join('\n');
+
+    console.log("Datos enviados después de limpieza:", puntos); // Log para verificar datos
+
     const response = await fetch('/update_results', {
         method: 'POST',
         headers: {
@@ -15,6 +21,7 @@ async function ejecutarProcesamiento() {
         document.getElementById('resultado').innerText = 'Error al procesar los resultados.';
     }
 }
+
 
 async function mostrarResultado() {
     try {

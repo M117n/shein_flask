@@ -32,16 +32,32 @@ def save_df(df, ruta):
     except Exception as e:
         print(f"Error saving DataFrame to {ruta}: {e}")
 
-def calcular_puntos(jugadas):
+def delete_points(jugador):
+    try:
+        if os.path.exists(RESULTS_DIRECTORY):
+            df = pd.read_csv(RESULTS_DIRECTORY)
+            # Selecciona el jugador y pone los puntos en 0
+            df.loc[df['Jugador'] == jugador, 'Puntos'] = 0
+            # Guarda los cambios
+            df.to_csv(RESULTS_DIRECTORY, index=False)
+        else:
+            print("El archivo de resultados no existe.")
+    except Exception as e:
+        print(f"Error: {e}")
+
+def calcular_puntos(jugadas, jugador):
     puntos = []
     tipos = []
     for jugada in jugadas:
-        if 'jugador' in jugada.lower():
+        jugada = jugada.lower()
+
+        if 'jugador' in jugada.lower() or 'jugadora' in jugada.lower():
             # Si la jugada contiene 'jugador', no se suman puntos y se ignora.
             tipos.append('Jugador')
             puntos.append(0)  # Puntos para jugada ignorada
+            delete_points(jugador)
             continue
-        if 'nuevo' in jugada.lower():
+        elif 'nuevo' in jugada.lower():
             puntos.append(5)
             tipos.append('Nuevo')
         elif 'intercambio' in jugada.lower():
@@ -120,19 +136,30 @@ def procesar_resultados(texto):
 
         for linea in lineas:
             linea = linea.strip()
-            if not linea.startswith('⁃') and linea:
+            # Identificar un nuevo jugador si la línea no empieza con guion y no está vacía
+            if linea and not linea.startswith('-'):
                 jugador_actual = linea
                 data[jugador_actual] = []
-            elif linea.startswith('⁃') and jugador_actual:
-                jugada = linea.replace('⁃', '').strip()
-                data[jugador_actual].append(jugada)
+            # Si hay un jugador actual, asociar jugadas correctamente
+            elif linea.startswith('-') and jugador_actual:
+                jugada = linea.replace('-', '').strip()  # Limpiar guion y espacios
+                if jugada:  # Asegurarse de que no es una línea vacía después de limpiar
+                    data[jugador_actual].append(jugada)
+            else:
+                # Mensaje de depuración para formato inesperado
+                print(f"Formato inesperado o jugador actual no definido: '{linea}'")
+
+        # Si no se encontraron jugadores, retorna un DataFrame vacío
+        if not data:
+            print("No se encontraron jugadores válidos en los datos.")
+            return pd.DataFrame(columns=['Jugador', 'Puntos']), [], [], []
 
         jugadores = list(data.keys())
         puntos = []
         tipos = {}
 
         for jugador in jugadores:
-            p, t = calcular_puntos(data[jugador])
+            p, t = calcular_puntos(data[jugador], jugador)
             puntos.append(sum(p))
             tipos[jugador] = dict(zip(t, p))
 
@@ -141,10 +168,13 @@ def procesar_resultados(texto):
             'Puntos': puntos
         })
 
-        return df, jugadores, puntos, tipos
+        return df, tipos
+
     except Exception as e:
         print(f"Error processing results: {e}")
         return pd.DataFrame(columns=['Jugador', 'Puntos']), [], [], []
+
+
     
 @app.route('/get_latest_results', methods=['GET'])
 def get_latest_results():
@@ -166,16 +196,23 @@ def update_results():
         content = request.json.get('results', '')
         if not content:
             return jsonify({'status': 'error', 'message': 'No results provided.'}), 400
+        
+        # Log para verificar los datos recibidos
+        print(f"Contenido recibido: {content}")
 
-        new_data, players, points, types = procesar_resultados(content)
+        new_data, types = procesar_resultados(content)
+        print(f"Datos procesados: {new_data}")  # Log para ver los datos procesados
 
         new_data['Puntos'] = new_data['Puntos'].astype(int)
         data = load_df(RESULTS_DIRECTORY)
+        print(f"Datos cargados de CSV: {data}")  # Log para ver datos cargados del CSV
+
         merged_data = pd.concat([data, new_data], ignore_index=True)
         final_data = merged_data.groupby('Jugador', as_index=False)['Puntos'].sum()
         final_data = final_data.sort_values(by='Puntos', ascending=False)
 
         save_df(final_data, RESULTS_DIRECTORY)
+        print(f"Datos guardados en CSV: {final_data}")  # Log para ver los datos finales guardados
 
         create_log(types)
 
@@ -183,6 +220,7 @@ def update_results():
     except Exception as e:
         print(f"Error in update_results: {e}")
         return jsonify({'status': 'error', 'message': 'An unexpected error occurred.'}), 500
+
 
 if __name__ == '__main__':
     app.run(debug=True)
