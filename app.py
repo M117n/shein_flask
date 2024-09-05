@@ -50,32 +50,49 @@ def calcular_puntos(jugadas):
         else:
             puntos.append(1)
             tipos.append('Regular')
+
     return puntos, tipos
 
-def create_log(player, points, types):
+def create_log(types):
     try:
+        # Verificar si el archivo existe
         if os.path.exists(LOG_DIRECTORY):
-            log_df = pd.read_csv(LOG_DIRECTORY)
+            try:
+                # Intentar leer el archivo
+                log_df = pd.read_csv(LOG_DIRECTORY)
+                # Si el archivo está vacío, crear un DataFrame con las columnas correctas
+                if log_df.empty:
+                    log_df = pd.DataFrame(columns=['Jugador', 'Fecha', 'Hora', 'Puntos', 'Tipo'])
+            except pd.errors.EmptyDataError:
+                # Si hay un error de datos vacíos, crear el DataFrame con las columnas correctas
+                log_df = pd.DataFrame(columns=['Jugador', 'Fecha', 'Hora', 'Puntos', 'Tipo'])
         else:
+            # Si el archivo no existe, crear un DataFrame nuevo con las columnas correctas
             log_df = pd.DataFrame(columns=['Jugador', 'Fecha', 'Hora', 'Puntos', 'Tipo'])
 
         fecha_hora = datetime.datetime.now()
         fecha = fecha_hora.date()
         hora = fecha_hora.time()
 
-        for point, point_type in zip(points, types):
-            log_entry = {
-                'Jugador': player,
-                'Fecha': fecha,
-                'Hora': hora,
-                'Puntos': point,
-                'Tipo': point_type
-            }
-            log_df = pd.concat([log_df, pd.DataFrame([log_entry])], ignore_index=True)
+        log_entries = []
+
+        for player, tipos in types.items():
+            for tipo, puntos in tipos.items():
+                log_entry = {
+                    'Jugador': player,
+                    'Fecha': fecha,
+                    'Hora': hora,
+                    'Puntos': puntos,
+                    'Tipo': tipo
+                }
+                log_entries.append(log_entry)
+
+        new_entries_df = pd.DataFrame(log_entries)
+        log_df = pd.concat([log_df, new_entries_df], ignore_index=True)
 
         save_df(log_df, LOG_DIRECTORY)
     except Exception as e:
-        print(f"Error creating log for {player}: {e}")
+        print(f"Error creando log: {e}")
 
 def log_statistic():
     try:
@@ -112,12 +129,12 @@ def procesar_resultados(texto):
 
         jugadores = list(data.keys())
         puntos = []
-        tipos = []
+        tipos = {}
 
         for jugador in jugadores:
             p, t = calcular_puntos(data[jugador])
-            puntos.append(p)
-            tipos.append(t)
+            puntos.append(sum(p))
+            tipos[jugador] = dict(zip(t, p))
 
         df = pd.DataFrame({
             'Jugador': jugadores,
@@ -152,14 +169,7 @@ def update_results():
 
         new_data, players, points, types = procesar_resultados(content)
 
-        # Explode para poder separar listas de puntos dentro del DF
-        try:
-            new_data = new_data.explode('Puntos')
-            new_data['Puntos'] = new_data['Puntos'].astype(int)
-        except Exception as e:
-            print(f"Error during explode and conversion: {e}")
-            return jsonify({'status': 'error', 'message': 'Error processing points.'}), 500
-
+        new_data['Puntos'] = new_data['Puntos'].astype(int)
         data = load_df(RESULTS_DIRECTORY)
         merged_data = pd.concat([data, new_data], ignore_index=True)
         final_data = merged_data.groupby('Jugador', as_index=False)['Puntos'].sum()
@@ -167,10 +177,9 @@ def update_results():
 
         save_df(final_data, RESULTS_DIRECTORY)
 
-        for player, points_player, type_player in zip(players, points, types):
-            create_log(player, points_player, type_player)
+        create_log(types)
 
-        return jsonify({'status': 'success', 'message': 'Results updated successfully', 'data': final_data.to_dict(orient='records')}), 200
+        return jsonify({'status': 'success', 'message': 'Se actualizó correctamente', 'data': final_data.to_dict(orient='records')}), 200
     except Exception as e:
         print(f"Error in update_results: {e}")
         return jsonify({'status': 'error', 'message': 'An unexpected error occurred.'}), 500
