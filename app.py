@@ -1,12 +1,12 @@
-from flask import Flask, request, jsonify, render_template, redirect, url_for
+from flask import Flask, request, jsonify, render_template, redirect, url_for, make_response
 import pandas as pd
 import os
 import datetime
-from flask_cors import CORS
+#from flask_cors import CORS
 
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
-CORS(app)
+#CORS(app)
 
 RESULTS_DIRECTORY = 'data\\resultados.csv'
 LOG_DIRECTORY = 'data\logs.csv'
@@ -74,16 +74,12 @@ def create_log(types):
         # Verificar si el archivo existe
         if os.path.exists(LOG_DIRECTORY):
             try:
-                # Intentar leer el archivo
                 log_df = pd.read_csv(LOG_DIRECTORY)
-                # Si el archivo está vacío, crear un DataFrame con las columnas correctas
                 if log_df.empty:
                     log_df = pd.DataFrame(columns=['Jugador', 'Fecha', 'Hora', 'Puntos', 'Tipo'])
             except pd.errors.EmptyDataError:
-                # Si hay un error de datos vacíos, crear el DataFrame con las columnas correctas
                 log_df = pd.DataFrame(columns=['Jugador', 'Fecha', 'Hora', 'Puntos', 'Tipo'])
         else:
-            # Si el archivo no existe, crear un DataFrame nuevo con las columnas correctas
             log_df = pd.DataFrame(columns=['Jugador', 'Fecha', 'Hora', 'Puntos', 'Tipo'])
 
         fecha_hora = datetime.datetime.now()
@@ -135,7 +131,7 @@ def procesar_resultados(texto):
         lineas = texto.splitlines()
 
         for linea in lineas:
-            linea = linea.strip()
+            linea = linea.strip().upper()
             # Identificar un nuevo jugador si la línea no empieza con guion y no está vacía
             if linea and not linea.startswith('-'):
                 jugador_actual = linea
@@ -180,12 +176,22 @@ def procesar_resultados(texto):
 def get_latest_results():
     try:
         data = load_df(RESULTS_DIRECTORY)
+        # print(f"Datos cargados: {data}")  # Log para verificar los datos cargados
+
         if data.empty:
+            print("Error: No hay datos disponibles en el archivo.")
             return jsonify({'status': 'error', 'message': 'No hay resultados disponibles.'}), 404
-        
+
+        # Agrupación y ordenación de datos
         final_data = data.groupby('Jugador', as_index=False)['Puntos'].sum()
         final_data = final_data.sort_values(by='Puntos', ascending=False)
-        return jsonify({'status': 'success', 'data': final_data.to_dict(orient='records')}), 200
+
+        #print(f"Datos procesados correctamente: {final_data}")  # Log para verificar los datos procesados
+        response = make_response(jsonify({'status': 'success', 'data': final_data.to_dict(orient='records')}), 200)
+        response.headers['Cache-Control'] = 'no-store'
+
+        return response
+
     except Exception as e:
         print(f"Error in get_latest_results: {e}")
         return jsonify({'status': 'error', 'message': 'An unexpected error occurred.'}), 500
@@ -198,21 +204,21 @@ def update_results():
             return jsonify({'status': 'error', 'message': 'No results provided.'}), 400
         
         # Log para verificar los datos recibidos
-        print(f"Contenido recibido: {content}")
+        #print(f"Contenido recibido: {content}")
 
         new_data, types = procesar_resultados(content)
-        print(f"Datos procesados: {new_data}")  # Log para ver los datos procesados
+        #print(f"Datos procesados: {new_data}")  # Log para ver los datos procesados
 
         new_data['Puntos'] = new_data['Puntos'].astype(int)
         data = load_df(RESULTS_DIRECTORY)
-        print(f"Datos cargados de CSV: {data}")  # Log para ver datos cargados del CSV
+        #print(f"Datos cargados de CSV: {data}")  # Log para ver datos cargados del CSV
 
         merged_data = pd.concat([data, new_data], ignore_index=True)
         final_data = merged_data.groupby('Jugador', as_index=False)['Puntos'].sum()
         final_data = final_data.sort_values(by='Puntos', ascending=False)
 
         save_df(final_data, RESULTS_DIRECTORY)
-        print(f"Datos guardados en CSV: {final_data}")  # Log para ver los datos finales guardados
+        #print(f"Datos guardados en CSV: {final_data}")  # Log para ver los datos finales guardados
 
         create_log(types)
 
