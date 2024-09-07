@@ -182,6 +182,46 @@ def download_latest_results():
         aux_file_path = os.path.join('data', aux_file)
         final_data.to_excel(aux_file_path, index=False)
 
+        # Aplicar estilo al xlsx
+        wb = load_workbook(aux_file_path)
+        ws = wb.active
+        ws.title = "Resultados"
+
+        # Aplicar estilos a la tabla
+        # Crear una tabla de Excel con estilo predeterminado
+        tab = Table(displayName="Resultados", ref=ws.dimensions)
+
+        # Estilo de la tabla
+        style = TableStyleInfo(name="TableStyleMedium9", showFirstColumn=False,
+                               showLastColumn=False, showRowStripes=True, showColumnStripes=True)
+        tab.tableStyleInfo = style
+        ws.add_table(tab)
+
+        # Aplicar estilos a los encabezados
+        header_fill = PatternFill(start_color="4F81BD", end_color="4F81BD", fill_type="solid")
+        header_font = Font(color="FFFFFF", bold=True)
+        alignment = Alignment(horizontal="center", vertical="center")
+        border = Border(left=Side(style='thin'), right=Side(style='thin'), top=Side(style='thin'), bottom=Side(style='thin'))
+
+        for cell in ws[1]:
+            cell.fill = header_fill
+            cell.font = header_font
+            cell.alignment = alignment
+            cell.border = border
+
+        for row in ws.iter_rows():
+            for cell in row:
+                cell.border = border
+
+        # Ajustar las dimensiones de la columna 'Jugador'
+        ws.column_dimensions['A'].width = 28
+
+        # Centrar los valores en la columna 'Puntos'
+        for cell in ws['B']:
+            cell.alignment = alignment
+
+        wb.save(aux_file_path)
+
         return send_file(aux_file_path, as_attachment=True, download_name=aux_file, mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
     except Exception as e:
