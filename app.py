@@ -11,8 +11,8 @@ import datetime
 app = Flask(__name__, static_folder='static', template_folder='templates')
 #CORS(app)
 
-RESULTS_DIRECTORY = 'data\\resultados.csv'
-LOG_DIRECTORY = 'data\logs.csv'
+RESULTS_DIRECTORY = os.path.join('data', 'resultados.csv')
+LOG_DIRECTORY = os.path.join('data', 'logs.csv')
 
 @app.route('/')
 def home():
