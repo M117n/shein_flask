@@ -59,3 +59,7 @@ async function mostrarResultado() {
         document.getElementById('resultado').innerText = 'Error al obtener los resultados_1';
     }
 }
+
+function descargarResultados() {
+    window.location.href = '/download_latest_results';
+}

@@ -1,4 +1,7 @@
-from flask import Flask, request, jsonify, render_template, redirect, url_for, make_response
+from flask import Flask, request, jsonify, render_template, make_response, send_file
+from openpyxl import Workbook, load_workbook
+from openpyxl.styles import PatternFill, Font, Alignment, Border, Side
+from openpyxl.worksheet.table import Table, TableStyleInfo
 import pandas as pd
 import os
 import datetime
@@ -118,11 +121,6 @@ def log_statistic():
     except Exception as e:
         print("Error creando estadistica")
 
-def to_excel(df):
-    try:
-        df.to_excel(f'Resultados_{datetime.date.today()}.xlsx', index=False)
-    except Exception as e:
-        print(f"Error exporting to Excel: {e}")
 
 def procesar_resultados(texto):
     try:
@@ -170,7 +168,25 @@ def procesar_resultados(texto):
         print(f"Error processing results: {e}")
         return pd.DataFrame(columns=['Jugador', 'Puntos']), [], [], []
 
+@app.route('/download_latest_results', methods=['GET'])
+def download_latest_results():
+    try:
+        data = load_df(RESULTS_DIRECTORY)
+        if data.empty:
+            return jsonify({'status':'error', 'message': 'No hay respuesta disponible para descargar.'}), 404
+        
+        final_data = data.groupby('Jugador', as_index=False)['Puntos'].sum()
+        final_data = final_data.sort_values('Puntos', ascending=False)
 
+        aux_file = f'Resultados.{datetime.date.today()}.xlsx'
+        aux_file_path = os.path.join('data', aux_file)
+        final_data.to_excel(aux_file_path, index=False)
+
+        return send_file(aux_file_path, as_attachment=True, download_name=aux_file, mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+
+    except Exception as e:
+        print(f'Error en download_latest_results: {e}')
+        return jsonify({'status': 'error', 'message': 'Error al generar el archivo para descargar.'}), 500
     
 @app.route('/get_latest_results', methods=['GET'])
 def get_latest_results():
