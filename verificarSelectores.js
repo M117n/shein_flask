@@ -1,4 +1,3 @@
-
 function verificarSelectores() {
     // Selecciona el área de texto donde ingresas los puntos
     const puntosInput = document.getElementById('puntosInput');
