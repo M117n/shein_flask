@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>W3.CSS Template</title>
+<title>Shein Games</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="{{ url_for('static', filename='css/w3.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/purged-w3.css') }}">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <style>
 body,h1,h5 {font-family: "Raleway", sans-serif}
@@ -24,7 +24,7 @@ body, html {height: 100%}
     <p></p>
   </div>
   <div class="w3-display-topleft w3-container w3-xlarge">
-    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p>
+    <!-- <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">menu</button></p> -->
     <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-white">Actualizar lista</button></p>
   </div>
   <div class="w3-display-bottomleft w3-container">
@@ -79,22 +79,22 @@ body, html {height: 100%}
       <textarea id="puntosInput" class="w3-input w3-padding-16 w3-border" placeholder="Ingresa la lista de puntos..."></textarea>
       <p>
         <button class="w3-button w3-black" onclick="ejecutarProcesamiento()">Ejecutar</button>
-        <button class="w3-button w3-black" onclick="mostrarResultado()">Resultado más reciente</button>
+        <button class="w3-button w3-black" onclick="document.getElementById('contact').style.display='block'; mostrarResultado()">Resultado más reciente</button>
         <button class="w3-button w3-black" onclick="descargarResultados()">Descargar Resultados</button>
       </p>
       <div id="resultado" class="w3-container w3-padding-16">
-        <table class="w3-table w3-bordered w3-striped w3-white">
-            <thead>
-                <tr>
-                    <th>Jugador</th>
-                    <th>Puntos</th>
-                </tr>
-            </thead>
-            <tbody id="resultados-table-body">
-                <!-- Las filas serán generadas dinámicamente -->
-            </tbody>
-        </table>
       </div>
+      <table class="w3-table w3-bordered w3-striped w3-white">
+          <thead>
+              <tr>
+                  <th>Jugador</th>
+                  <th>Puntos</th>
+              </tr>
+          </thead>
+          <tbody id="resultados-table-body">
+              <!-- Las filas serán generadas dinámicamente -->
+          </tbody>
+      </table>
     </div>
   </div>
 </div>

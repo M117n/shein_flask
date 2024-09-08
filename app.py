@@ -5,48 +5,79 @@ from openpyxl.worksheet.table import Table, TableStyleInfo
 import pandas as pd
 import os
 import datetime
+import logging
 #from flask_cors import CORS
-
-
-app = Flask(__name__, static_folder='static', template_folder='templates')
-#CORS(app)
 
 RESULTS_DIRECTORY = os.path.join('data', 'resultados.csv')
 LOG_DIRECTORY = os.path.join('data', 'logs.csv')
+INFO_LOGGER = os.path.join(os.path.join('data', 'system_logs'), 'info.log')
+DEBUG_LOGGER = os.path.join(os.path.join('data', 'system_logs'), 'debug.log')
+
+# Loggers
+logger_info = logging.getLogger('info_logger')
+logger_info.setLevel(logging.INFO)
+
+logger_debug = logging.getLogger('debug_logger')
+logger_debug.setLevel(logging.DEBUG)
+
+info_handler = logging.FileHandler(INFO_LOGGER)
+debug_handler = logging.FileHandler(DEBUG_LOGGER)
+
+info_handler.setLevel(logging.INFO)
+debug_handler.setLevel(logging.DEBUG)
+
+info_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+debug_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+info_handler.setFormatter(info_format)
+debug_handler.setFormatter(debug_format)
+
+logger_info.addHandler(info_handler)
+logger_debug.addHandler(debug_handler)
+
+
+app = Flask(__name__, static_folder='static', template_folder='templates')
+
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
+
 def load_df(directory):
     try:
         if os.path.exists(directory):
             df = pd.read_csv(directory)
+            logger_info.info(f"DataFrame cargado correctamente desde {directory}")
         else:
             df = pd.DataFrame(columns=['Jugador', 'Puntos'])
+            logger_info.info(f"El archivo {directory} no existe. Se creó un DataFrame vacío.")
         return df
     except Exception as e:
-        print(f"Error loading DataFrame from {directory}: {e}")
+        logger_debug.error(f"Error loading DataFrame from {directory}: {e}")
         return pd.DataFrame(columns=['Jugador', 'Puntos'])
+    
 
 def save_df(df, ruta):
     try:
         df.to_csv(ruta, index=False)
+        logger_info.info(f"DataFrame guardado correctamente en {ruta}")
     except Exception as e:
-        print(f"Error saving DataFrame to {ruta}: {e}")
+        logger_debug.error(f"Error saving DataFrame to {ruta}: {e}")
+
 
 def delete_points(jugador):
     try:
         if os.path.exists(RESULTS_DIRECTORY):
             df = pd.read_csv(RESULTS_DIRECTORY)
-            # Selecciona el jugador y pone los puntos en 0
             df.loc[df['Jugador'] == jugador, 'Puntos'] = 0
-            # Guarda los cambios
             df.to_csv(RESULTS_DIRECTORY, index=False)
+            logger_info.info(f"Puntos eliminados para el jugador {jugador}")
         else:
-            print("El archivo de resultados no existe.")
+            logger_debug.warning("El archivo de resultados no existe.")
     except Exception as e:
-        print(f"Error: {e}")
+        logger_debug.error(f"Error al eliminar puntos para {jugador}: {e}")
+
 
 def calcular_puntos(jugadas, jugador):
     puntos = []
@@ -70,7 +101,10 @@ def calcular_puntos(jugadas, jugador):
             puntos.append(1)
             tipos.append('Regular')
 
+    logger_info.info(f"Puntos calculados para el jugador {jugador}: {puntos}")
+    logger_info.info(f"Tipos calculados para el jugador {jugador}: {tipos}")
     return puntos, tipos
+
 
 def create_log(types):
     try:
@@ -106,20 +140,25 @@ def create_log(types):
         log_df = pd.concat([log_df, new_entries_df], ignore_index=True)
 
         save_df(log_df, LOG_DIRECTORY)
+        logger_info.info(f"Log creado correctamente en {LOG_DIRECTORY}")
     except Exception as e:
-        print(f"Error creando log: {e}")
+        logger_debug.error(f"Error creando log: {e}")
+
 
 def log_statistic():
     try:
         if os.path.exists(LOG_DIRECTORY):
             log_df = pd.read_csv(LOG_DIRECTORY)
+            logger_info.info("Log cargado correctamente para estadísticas.")
         else:
             log_df = pd.DataFrame(columns=['Jugador', 'Fecha', 'Hora', 'Puntos', 'Tipo'])
+            logger_debug.warning("Archivo de log no encontrado. Se creó un DataFrame vacío.")
 
         group_log_df = log_df.groupby('Jugador')
+        logger_info.info("Estadísticas agrupadas por jugador.")
 
     except Exception as e:
-        print("Error creando estadistica")
+        logger_debug.error("Error creando estadística: {e}")
 
 
 def procesar_resultados(texto):
@@ -141,11 +180,11 @@ def procesar_resultados(texto):
                     data[jugador_actual].append(jugada)
             else:
                 # Mensaje de depuración para formato inesperado
-                print(f"Formato inesperado o jugador actual no definido: '{linea}'")
+                logger_debug.warning(f"Formato inesperado o jugador actual no definido: '{linea}'")
 
         # Si no se encontraron jugadores, retorna un DataFrame vacío
         if not data:
-            print("No se encontraron jugadores válidos en los datos.")
+            logger_info.warning("No se encontraron jugadores válidos en los datos.")
             return pd.DataFrame(columns=['Jugador', 'Puntos']), [], [], []
 
         jugadores = list(data.keys())
@@ -154,32 +193,44 @@ def procesar_resultados(texto):
 
         for jugador in jugadores:
             p, t = calcular_puntos(data[jugador], jugador)
+            for punto, tipo in zip(p, t):
+                if jugador not in tipos:
+                    tipos[jugador] = {}
+                if tipo in tipos[jugador]:
+                    tipos[jugador][tipo] += punto
+                else:
+                    tipos[jugador][tipo] = punto
+
             puntos.append(sum(p))
-            tipos[jugador] = dict(zip(t, p))
 
         df = pd.DataFrame({
             'Jugador': jugadores,
             'Puntos': puntos
         })
 
+        logger_info.info(f"Resultados procesados: {df}")
+        logger_info.info(f"Data procesados: {data}")
+        logger_info.info(f"Tipos procesados: {tipos}")
         return df, tipos
 
     except Exception as e:
-        print(f"Error processing results: {e}")
+        logger_debug.error(f"Error processing results: {e}")
         return pd.DataFrame(columns=['Jugador', 'Puntos']), [], [], []
+
 
 @app.route('/download_latest_results', methods=['GET'])
 def download_latest_results():
     try:
         data = load_df(RESULTS_DIRECTORY)
         if data.empty:
+            logger_info.warning("No hay respuesta disponible para descargar.")
             return jsonify({'status':'error', 'message': 'No hay respuesta disponible para descargar.'}), 404
         
         final_data = data.groupby('Jugador', as_index=False)['Puntos'].sum()
         final_data = final_data.sort_values('Puntos', ascending=False)
 
         aux_file = f'Resultados.{datetime.date.today()}.xlsx'
-        aux_file_path = os.path.join('data', aux_file)
+        aux_file_path = os.path.join(os.path.join('data', 'results'), aux_file)
         final_data.to_excel(aux_file_path, index=False)
 
         # Aplicar estilo al xlsx
@@ -221,12 +272,14 @@ def download_latest_results():
             cell.alignment = alignment
 
         wb.save(aux_file_path)
+        logger_info.info(f"Archivo de resultados generado y listo para descargar: {aux_file_path}")
 
         return send_file(aux_file_path, as_attachment=True, download_name=aux_file, mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
     except Exception as e:
-        print(f'Error en download_latest_results: {e}')
+        logger_debug.error(f'Error en download_latest_results: {e}')
         return jsonify({'status': 'error', 'message': 'Error al generar el archivo para descargar.'}), 500
+
     
 @app.route('/get_latest_results', methods=['GET'])
 def get_latest_results():
@@ -235,52 +288,48 @@ def get_latest_results():
         # print(f"Datos cargados: {data}")  # Log para verificar los datos cargados
 
         if data.empty:
-            print("Error: No hay datos disponibles en el archivo.")
+            logger_info.warning("Error: No hay datos disponibles en el archivo.")
             return jsonify({'status': 'error', 'message': 'No hay resultados disponibles.'}), 404
 
         # Agrupación y ordenación de datos
         final_data = data.groupby('Jugador', as_index=False)['Puntos'].sum()
         final_data = final_data.sort_values(by='Puntos', ascending=False)
 
-        #print(f"Datos procesados correctamente: {final_data}")  # Log para verificar los datos procesados
+        logger_info.info("Resultados obtenidos y procesados correctamente.")
         response = make_response(jsonify({'status': 'success', 'data': final_data.to_dict(orient='records')}), 200)
         response.headers['Cache-Control'] = 'no-store'
 
         return response
 
     except Exception as e:
-        print(f"Error in get_latest_results: {e}")
+        logger_debug.error(f"Error in get_latest_results: {e}")
         return jsonify({'status': 'error', 'message': 'An unexpected error occurred.'}), 500
+
 
 @app.route('/update_results', methods=['POST'])
 def update_results():
     try:
         content = request.json.get('results', '')
         if not content:
+            logger_info.warning("No results provided in the request.")
             return jsonify({'status': 'error', 'message': 'No results provided.'}), 400
-        
-        # Log para verificar los datos recibidos
-        #print(f"Contenido recibido: {content}")
 
         new_data, types = procesar_resultados(content)
-        #print(f"Datos procesados: {new_data}")  # Log para ver los datos procesados
 
         new_data['Puntos'] = new_data['Puntos'].astype(int)
         data = load_df(RESULTS_DIRECTORY)
-        #print(f"Datos cargados de CSV: {data}")  # Log para ver datos cargados del CSV
 
         merged_data = pd.concat([data, new_data], ignore_index=True)
         final_data = merged_data.groupby('Jugador', as_index=False)['Puntos'].sum()
         final_data = final_data.sort_values(by='Puntos', ascending=False)
 
         save_df(final_data, RESULTS_DIRECTORY)
-        #print(f"Datos guardados en CSV: {final_data}")  # Log para ver los datos finales guardados
-
         create_log(types)
 
+        logger_info.info("Resultados actualizados correctamente.")
         return jsonify({'status': 'success', 'message': 'Se actualizó correctamente', 'data': final_data.to_dict(orient='records')}), 200
     except Exception as e:
-        print(f"Error in update_results: {e}")
+        logger_debug.error(f"Error in update_results: {e}")
         return jsonify({'status': 'error', 'message': 'An unexpected error occurred.'}), 500
 
 

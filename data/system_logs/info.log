@@ -1,0 +1,750 @@
+2024-09-08 00:48:28,087 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 00:48:28,106 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:07:22,723 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:07:22,729 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:07:24,288 - info_logger - WARNING - No results provided in the request.
+2024-09-08 01:07:25,567 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:07:25,572 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:07:28,401 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:07:28,404 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:08:16,373 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:08:16,376 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:10:33,462 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:10:33,465 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:12:28,910 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:12:28,913 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:12:37,879 - info_logger - WARNING - No results provided in the request.
+2024-09-08 01:12:42,577 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:12:42,580 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:12:43,762 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:12:43,765 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:12:49,948 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:12:49,951 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:12:50,562 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:12:50,565 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 01:39:48,896 - info_logger - INFO - Puntos calculados para el jugador JUGADORA: DORIS: []
+2024-09-08 01:39:48,896 - info_logger - INFO - Tipos calculados para el jugador JUGADORA: DORIS: []
+2024-09-08 01:39:48,897 - info_logger - INFO - Puntos calculados para el jugador FECHA: 06/09/2024: []
+2024-09-08 01:39:48,897 - info_logger - INFO - Tipos calculados para el jugador FECHA: 06/09/2024: []
+2024-09-08 01:39:48,897 - info_logger - INFO - Puntos calculados para el jugador GLENDY: [1, 1, 1, 1]
+2024-09-08 01:39:48,897 - info_logger - INFO - Tipos calculados para el jugador GLENDY: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,897 - info_logger - INFO - Puntos calculados para el jugador BERE: [1, 1, 1, 1]
+2024-09-08 01:39:48,897 - info_logger - INFO - Tipos calculados para el jugador BERE: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,898 - info_logger - INFO - Puntos calculados para el jugador DENISSE VALENZUELA: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5]
+2024-09-08 01:39:48,898 - info_logger - INFO - Tipos calculados para el jugador DENISSE VALENZUELA: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 01:39:48,898 - info_logger - INFO - Puntos calculados para el jugador BRENDA: [1, 1, 1, 1]
+2024-09-08 01:39:48,898 - info_logger - INFO - Tipos calculados para el jugador BRENDA: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,898 - info_logger - INFO - Puntos calculados para el jugador ISIS LOPEZ: [1]
+2024-09-08 01:39:48,898 - info_logger - INFO - Tipos calculados para el jugador ISIS LOPEZ: ['Regular']
+2024-09-08 01:39:48,898 - info_logger - INFO - Puntos calculados para el jugador MARITZA: [1]
+2024-09-08 01:39:48,899 - info_logger - INFO - Tipos calculados para el jugador MARITZA: ['Regular']
+2024-09-08 01:39:48,899 - info_logger - INFO - Puntos calculados para el jugador CHAYO: [1, 1, 1, 1, 1]
+2024-09-08 01:39:48,899 - info_logger - INFO - Tipos calculados para el jugador CHAYO: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,899 - info_logger - INFO - Puntos calculados para el jugador BLANKY RUIZ: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+2024-09-08 01:39:48,899 - info_logger - INFO - Tipos calculados para el jugador BLANKY RUIZ: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,899 - info_logger - INFO - Puntos calculados para el jugador BRIGITTE: [1]
+2024-09-08 01:39:48,899 - info_logger - INFO - Tipos calculados para el jugador BRIGITTE: ['Regular']
+2024-09-08 01:39:48,899 - info_logger - INFO - Puntos calculados para el jugador CHRISTIAN BUSTAMANTE: [1, 1, 1, 1]
+2024-09-08 01:39:48,900 - info_logger - INFO - Tipos calculados para el jugador CHRISTIAN BUSTAMANTE: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,900 - info_logger - INFO - Puntos calculados para el jugador JINMARIS: [1]
+2024-09-08 01:39:48,900 - info_logger - INFO - Tipos calculados para el jugador JINMARIS: ['Regular']
+2024-09-08 01:39:48,900 - info_logger - INFO - Puntos calculados para el jugador YADI: [1, 1, 1, 1, 1]
+2024-09-08 01:39:48,900 - info_logger - INFO - Tipos calculados para el jugador YADI: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,901 - info_logger - INFO - Puntos calculados para el jugador YANE: [1]
+2024-09-08 01:39:48,901 - info_logger - INFO - Tipos calculados para el jugador YANE: ['Regular']
+2024-09-08 01:39:48,901 - info_logger - INFO - Puntos calculados para el jugador BUENO: [1, 1]
+2024-09-08 01:39:48,901 - info_logger - INFO - Tipos calculados para el jugador BUENO: ['Regular', 'Regular']
+2024-09-08 01:39:48,901 - info_logger - INFO - Puntos calculados para el jugador LUISANA ROMERO: [1, 1, 1, 1, 1]
+2024-09-08 01:39:48,902 - info_logger - INFO - Tipos calculados para el jugador LUISANA ROMERO: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,902 - info_logger - INFO - Puntos calculados para el jugador DAYANA: [1]
+2024-09-08 01:39:48,902 - info_logger - INFO - Tipos calculados para el jugador DAYANA: ['Regular']
+2024-09-08 01:39:48,902 - info_logger - INFO - Puntos calculados para el jugador ANDREA: [1]
+2024-09-08 01:39:48,902 - info_logger - INFO - Tipos calculados para el jugador ANDREA: ['Regular']
+2024-09-08 01:39:48,902 - info_logger - INFO - Puntos calculados para el jugador CRISTY: [1]
+2024-09-08 01:39:48,903 - info_logger - INFO - Tipos calculados para el jugador CRISTY: ['Regular']
+2024-09-08 01:39:48,903 - info_logger - INFO - Puntos calculados para el jugador NATASHA: [1, 1]
+2024-09-08 01:39:48,903 - info_logger - INFO - Tipos calculados para el jugador NATASHA: ['Regular', 'Regular']
+2024-09-08 01:39:48,903 - info_logger - INFO - Puntos calculados para el jugador OSMANY: [1, 1, 1, 5]
+2024-09-08 01:39:48,903 - info_logger - INFO - Tipos calculados para el jugador OSMANY: ['Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 01:39:48,903 - info_logger - INFO - Puntos calculados para el jugador HILLARY NICHOLE: [1]
+2024-09-08 01:39:48,904 - info_logger - INFO - Tipos calculados para el jugador HILLARY NICHOLE: ['Regular']
+2024-09-08 01:39:48,904 - info_logger - INFO - Puntos calculados para el jugador AHSLIN GIRON: [1]
+2024-09-08 01:39:48,904 - info_logger - INFO - Tipos calculados para el jugador AHSLIN GIRON: ['Regular']
+2024-09-08 01:39:48,904 - info_logger - INFO - Puntos calculados para el jugador YESSICA: [1]
+2024-09-08 01:39:48,905 - info_logger - INFO - Tipos calculados para el jugador YESSICA: ['Regular']
+2024-09-08 01:39:48,905 - info_logger - INFO - Puntos calculados para el jugador LIZ BRAVO: [1, 1, 1, 1]
+2024-09-08 01:39:48,905 - info_logger - INFO - Tipos calculados para el jugador LIZ BRAVO: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:48,905 - info_logger - INFO - Puntos calculados para el jugador SUN: [1]
+2024-09-08 01:39:48,906 - info_logger - INFO - Tipos calculados para el jugador SUN: ['Regular']
+2024-09-08 01:39:48,906 - info_logger - INFO - Puntos calculados para el jugador LAURIS ELIZABETH: [1]
+2024-09-08 01:39:48,906 - info_logger - INFO - Tipos calculados para el jugador LAURIS ELIZABETH: ['Regular']
+2024-09-08 01:39:48,906 - info_logger - INFO - Puntos calculados para el jugador KEYLA PEREZ: [1]
+2024-09-08 01:39:48,906 - info_logger - INFO - Tipos calculados para el jugador KEYLA PEREZ: ['Regular']
+2024-09-08 01:39:48,907 - info_logger - INFO - Puntos calculados para el jugador MAURA OCHOA: [1, 1]
+2024-09-08 01:39:48,907 - info_logger - INFO - Tipos calculados para el jugador MAURA OCHOA: ['Regular', 'Regular']
+2024-09-08 01:39:48,907 - info_logger - INFO - Puntos calculados para el jugador PAUSINI: [1, 1]
+2024-09-08 01:39:48,907 - info_logger - INFO - Tipos calculados para el jugador PAUSINI: ['Regular', 'Regular']
+2024-09-08 01:39:48,907 - info_logger - INFO - Puntos calculados para el jugador ARLIN: [1]
+2024-09-08 01:39:48,907 - info_logger - INFO - Tipos calculados para el jugador ARLIN: ['Regular']
+2024-09-08 01:39:48,921 - info_logger - INFO - Puntos eliminados para el jugador DORIS
+2024-09-08 01:39:48,921 - info_logger - INFO - Puntos calculados para el jugador DORIS: [0]
+2024-09-08 01:39:48,921 - info_logger - INFO - Tipos calculados para el jugador DORIS: ['Jugador']
+2024-09-08 01:39:48,933 - info_logger - INFO - Resultados procesados:                  Jugador  Puntos
+0        JUGADORA: DORIS       0
+1      FECHA: 06/09/2024       0
+2                 GLENDY       4
+3                   BERE       4
+4     DENISSE VALENZUELA      15
+5                 BRENDA       4
+6             ISIS LOPEZ       1
+7                MARITZA       1
+8                  CHAYO       5
+9            BLANKY RUIZ       9
+10              BRIGITTE       1
+11  CHRISTIAN BUSTAMANTE       4
+12              JINMARIS       1
+13                  YADI       5
+14                  YANE       1
+15                 BUENO       2
+16        LUISANA ROMERO       5
+17                DAYANA       1
+18                ANDREA       1
+19                CRISTY       1
+20               NATASHA       2
+21                OSMANY       8
+22       HILLARY NICHOLE       1
+23          AHSLIN GIRON       1
+24               YESSICA       1
+25             LIZ BRAVO       4
+26                   SUN       1
+27      LAURIS ELIZABETH       1
+28           KEYLA PEREZ       1
+29           MAURA OCHOA       2
+30               PAUSINI       2
+31                 ARLIN       1
+32                 DORIS       0
+2024-09-08 01:39:48,937 - info_logger - INFO - Data procesados: {'JUGADORA: DORIS': [], 'FECHA: 06/09/2024': [], 'GLENDY': ['J4', 'J2', 'Z7', '11'], 'BERE': ['BO', '@$', 'E9', 'TS'], 'DENISSE VALENZUELA': ['NI', 'M5', 'G*', 'C3', 'D2', 'M2', 'LA', 'V0', 'CL', 'HT', 'OS / (NUEVO)'], 'BRENDA': ['BO', 'M4', 'D9', 'AM'], 'ISIS LOPEZ': ['F2'], 'MARITZA': ['70'], 'CHAYO': ['V8', 'J5', 'G6', 'CZ', 'A2'], 'BLANKY RUIZ': ['BZ', 'M#', 'ZR', '19', 'MY', 'F6', 'RZ', '18', 'JZ'], 'BRIGITTE': ['F4'], 'CHRISTIAN BUSTAMANTE': ['M$', 'MA', 'GO', 'L2'], 'JINMARIS': ['M4'], 'YADI': ['JS', 'VE', '00', '4G', 'LH'], 'YANE': ['YE'], 'BUENO': ['S7', 'C£'], 'LUISANA ROMERO': ['P6', 'M7', 'E1', 'EA', '$$'], 'DAYANA': ['15'], 'ANDREA': ['MR'], 'CRISTY': ['AN'], 'NATASHA': ['D$', 'PX'], 'OSMANY': ['R4', 'J8', '18', 'M9 / (NUEVO)'], 'HILLARY NICHOLE': ['CA'], 'AHSLIN GIRON': ['G&'], 'YESSICA': ['YZ'], 'LIZ BRAVO': ['ES', 'NS', 'RL', 'TI'], 'SUN': ['G0'], 'LAURIS ELIZABETH': ['WQ'], 'KEYLA PEREZ': ['TM'], 'MAURA OCHOA': ['12', 'N1'], 'PAUSINI': ['PO', 'J0'], 'ARLIN': ['AO'], 'DORIS': ['JUGADORA']}
+2024-09-08 01:39:48,937 - info_logger - INFO - Tipos procesados: {'GLENDY': {'Regular': 4}, 'BERE': {'Regular': 4}, 'DENISSE VALENZUELA': {'Regular': 10, 'Nuevo': 5}, 'BRENDA': {'Regular': 4}, 'ISIS LOPEZ': {'Regular': 1}, 'MARITZA': {'Regular': 1}, 'CHAYO': {'Regular': 5}, 'BLANKY RUIZ': {'Regular': 9}, 'BRIGITTE': {'Regular': 1}, 'CHRISTIAN BUSTAMANTE': {'Regular': 4}, 'JINMARIS': {'Regular': 1}, 'YADI': {'Regular': 5}, 'YANE': {'Regular': 1}, 'BUENO': {'Regular': 2}, 'LUISANA ROMERO': {'Regular': 5}, 'DAYANA': {'Regular': 1}, 'ANDREA': {'Regular': 1}, 'CRISTY': {'Regular': 1}, 'NATASHA': {'Regular': 2}, 'OSMANY': {'Regular': 3, 'Nuevo': 5}, 'HILLARY NICHOLE': {'Regular': 1}, 'AHSLIN GIRON': {'Regular': 1}, 'YESSICA': {'Regular': 1}, 'LIZ BRAVO': {'Regular': 4}, 'SUN': {'Regular': 1}, 'LAURIS ELIZABETH': {'Regular': 1}, 'KEYLA PEREZ': {'Regular': 1}, 'MAURA OCHOA': {'Regular': 2}, 'PAUSINI': {'Regular': 2}, 'ARLIN': {'Regular': 1}, 'DORIS': {'Jugador': 0}}
+2024-09-08 01:39:48,941 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:39:48,953 - info_logger - INFO - DataFrame guardado correctamente en data/resultados.csv
+2024-09-08 01:39:48,964 - info_logger - INFO - DataFrame guardado correctamente en data/logs.csv
+2024-09-08 01:39:48,965 - info_logger - INFO - Log creado correctamente en data/logs.csv
+2024-09-08 01:39:48,965 - info_logger - INFO - Resultados actualizados correctamente.
+2024-09-08 01:39:54,217 - info_logger - INFO - Puntos calculados para el jugador JUGADORA: DORIS: []
+2024-09-08 01:39:54,217 - info_logger - INFO - Tipos calculados para el jugador JUGADORA: DORIS: []
+2024-09-08 01:39:54,217 - info_logger - INFO - Puntos calculados para el jugador FECHA: 06/09/2024: []
+2024-09-08 01:39:54,217 - info_logger - INFO - Tipos calculados para el jugador FECHA: 06/09/2024: []
+2024-09-08 01:39:54,218 - info_logger - INFO - Puntos calculados para el jugador GLENDY: [1, 1, 1, 1]
+2024-09-08 01:39:54,218 - info_logger - INFO - Tipos calculados para el jugador GLENDY: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,218 - info_logger - INFO - Puntos calculados para el jugador BERE: [1, 1, 1, 1]
+2024-09-08 01:39:54,218 - info_logger - INFO - Tipos calculados para el jugador BERE: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,218 - info_logger - INFO - Puntos calculados para el jugador DENISSE VALENZUELA: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5]
+2024-09-08 01:39:54,219 - info_logger - INFO - Tipos calculados para el jugador DENISSE VALENZUELA: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 01:39:54,219 - info_logger - INFO - Puntos calculados para el jugador BRENDA: [1, 1, 1, 1]
+2024-09-08 01:39:54,219 - info_logger - INFO - Tipos calculados para el jugador BRENDA: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,220 - info_logger - INFO - Puntos calculados para el jugador ISIS LOPEZ: [1]
+2024-09-08 01:39:54,220 - info_logger - INFO - Tipos calculados para el jugador ISIS LOPEZ: ['Regular']
+2024-09-08 01:39:54,220 - info_logger - INFO - Puntos calculados para el jugador MARITZA: [1]
+2024-09-08 01:39:54,221 - info_logger - INFO - Tipos calculados para el jugador MARITZA: ['Regular']
+2024-09-08 01:39:54,221 - info_logger - INFO - Puntos calculados para el jugador CHAYO: [1, 1, 1, 1, 1]
+2024-09-08 01:39:54,221 - info_logger - INFO - Tipos calculados para el jugador CHAYO: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,221 - info_logger - INFO - Puntos calculados para el jugador BLANKY RUIZ: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+2024-09-08 01:39:54,221 - info_logger - INFO - Tipos calculados para el jugador BLANKY RUIZ: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,222 - info_logger - INFO - Puntos calculados para el jugador BRIGITTE: [1]
+2024-09-08 01:39:54,222 - info_logger - INFO - Tipos calculados para el jugador BRIGITTE: ['Regular']
+2024-09-08 01:39:54,222 - info_logger - INFO - Puntos calculados para el jugador CHRISTIAN BUSTAMANTE: [1, 1, 1, 1]
+2024-09-08 01:39:54,222 - info_logger - INFO - Tipos calculados para el jugador CHRISTIAN BUSTAMANTE: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,223 - info_logger - INFO - Puntos calculados para el jugador JINMARIS: [1]
+2024-09-08 01:39:54,223 - info_logger - INFO - Tipos calculados para el jugador JINMARIS: ['Regular']
+2024-09-08 01:39:54,223 - info_logger - INFO - Puntos calculados para el jugador YADI: [1, 1, 1, 1, 1]
+2024-09-08 01:39:54,223 - info_logger - INFO - Tipos calculados para el jugador YADI: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,224 - info_logger - INFO - Puntos calculados para el jugador YANE: [1]
+2024-09-08 01:39:54,224 - info_logger - INFO - Tipos calculados para el jugador YANE: ['Regular']
+2024-09-08 01:39:54,224 - info_logger - INFO - Puntos calculados para el jugador BUENO: [1, 1]
+2024-09-08 01:39:54,225 - info_logger - INFO - Tipos calculados para el jugador BUENO: ['Regular', 'Regular']
+2024-09-08 01:39:54,225 - info_logger - INFO - Puntos calculados para el jugador LUISANA ROMERO: [1, 1, 1, 1, 1]
+2024-09-08 01:39:54,225 - info_logger - INFO - Tipos calculados para el jugador LUISANA ROMERO: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,225 - info_logger - INFO - Puntos calculados para el jugador DAYANA: [1]
+2024-09-08 01:39:54,226 - info_logger - INFO - Tipos calculados para el jugador DAYANA: ['Regular']
+2024-09-08 01:39:54,226 - info_logger - INFO - Puntos calculados para el jugador ANDREA: [1]
+2024-09-08 01:39:54,226 - info_logger - INFO - Tipos calculados para el jugador ANDREA: ['Regular']
+2024-09-08 01:39:54,226 - info_logger - INFO - Puntos calculados para el jugador CRISTY: [1]
+2024-09-08 01:39:54,226 - info_logger - INFO - Tipos calculados para el jugador CRISTY: ['Regular']
+2024-09-08 01:39:54,227 - info_logger - INFO - Puntos calculados para el jugador NATASHA: [1, 1]
+2024-09-08 01:39:54,227 - info_logger - INFO - Tipos calculados para el jugador NATASHA: ['Regular', 'Regular']
+2024-09-08 01:39:54,227 - info_logger - INFO - Puntos calculados para el jugador OSMANY: [1, 1, 1, 5]
+2024-09-08 01:39:54,227 - info_logger - INFO - Tipos calculados para el jugador OSMANY: ['Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 01:39:54,228 - info_logger - INFO - Puntos calculados para el jugador HILLARY NICHOLE: [1]
+2024-09-08 01:39:54,228 - info_logger - INFO - Tipos calculados para el jugador HILLARY NICHOLE: ['Regular']
+2024-09-08 01:39:54,228 - info_logger - INFO - Puntos calculados para el jugador AHSLIN GIRON: [1]
+2024-09-08 01:39:54,228 - info_logger - INFO - Tipos calculados para el jugador AHSLIN GIRON: ['Regular']
+2024-09-08 01:39:54,229 - info_logger - INFO - Puntos calculados para el jugador YESSICA: [1]
+2024-09-08 01:39:54,229 - info_logger - INFO - Tipos calculados para el jugador YESSICA: ['Regular']
+2024-09-08 01:39:54,229 - info_logger - INFO - Puntos calculados para el jugador LIZ BRAVO: [1, 1, 1, 1]
+2024-09-08 01:39:54,230 - info_logger - INFO - Tipos calculados para el jugador LIZ BRAVO: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 01:39:54,230 - info_logger - INFO - Puntos calculados para el jugador SUN: [1]
+2024-09-08 01:39:54,230 - info_logger - INFO - Tipos calculados para el jugador SUN: ['Regular']
+2024-09-08 01:39:54,230 - info_logger - INFO - Puntos calculados para el jugador LAURIS ELIZABETH: [1]
+2024-09-08 01:39:54,231 - info_logger - INFO - Tipos calculados para el jugador LAURIS ELIZABETH: ['Regular']
+2024-09-08 01:39:54,231 - info_logger - INFO - Puntos calculados para el jugador KEYLA PEREZ: [1]
+2024-09-08 01:39:54,231 - info_logger - INFO - Tipos calculados para el jugador KEYLA PEREZ: ['Regular']
+2024-09-08 01:39:54,231 - info_logger - INFO - Puntos calculados para el jugador MAURA OCHOA: [1, 1]
+2024-09-08 01:39:54,231 - info_logger - INFO - Tipos calculados para el jugador MAURA OCHOA: ['Regular', 'Regular']
+2024-09-08 01:39:54,232 - info_logger - INFO - Puntos calculados para el jugador PAUSINI: [1, 1]
+2024-09-08 01:39:54,232 - info_logger - INFO - Tipos calculados para el jugador PAUSINI: ['Regular', 'Regular']
+2024-09-08 01:39:54,232 - info_logger - INFO - Puntos calculados para el jugador ARLIN: [1]
+2024-09-08 01:39:54,232 - info_logger - INFO - Tipos calculados para el jugador ARLIN: ['Regular']
+2024-09-08 01:39:54,244 - info_logger - INFO - Puntos eliminados para el jugador DORIS
+2024-09-08 01:39:54,244 - info_logger - INFO - Puntos calculados para el jugador DORIS: [0]
+2024-09-08 01:39:54,245 - info_logger - INFO - Tipos calculados para el jugador DORIS: ['Jugador']
+2024-09-08 01:39:54,252 - info_logger - INFO - Resultados procesados:                  Jugador  Puntos
+0        JUGADORA: DORIS       0
+1      FECHA: 06/09/2024       0
+2                 GLENDY       4
+3                   BERE       4
+4     DENISSE VALENZUELA      15
+5                 BRENDA       4
+6             ISIS LOPEZ       1
+7                MARITZA       1
+8                  CHAYO       5
+9            BLANKY RUIZ       9
+10              BRIGITTE       1
+11  CHRISTIAN BUSTAMANTE       4
+12              JINMARIS       1
+13                  YADI       5
+14                  YANE       1
+15                 BUENO       2
+16        LUISANA ROMERO       5
+17                DAYANA       1
+18                ANDREA       1
+19                CRISTY       1
+20               NATASHA       2
+21                OSMANY       8
+22       HILLARY NICHOLE       1
+23          AHSLIN GIRON       1
+24               YESSICA       1
+25             LIZ BRAVO       4
+26                   SUN       1
+27      LAURIS ELIZABETH       1
+28           KEYLA PEREZ       1
+29           MAURA OCHOA       2
+30               PAUSINI       2
+31                 ARLIN       1
+32                 DORIS       0
+2024-09-08 01:39:54,256 - info_logger - INFO - Data procesados: {'JUGADORA: DORIS': [], 'FECHA: 06/09/2024': [], 'GLENDY': ['J4', 'J2', 'Z7', '11'], 'BERE': ['BO', '@$', 'E9', 'TS'], 'DENISSE VALENZUELA': ['NI', 'M5', 'G*', 'C3', 'D2', 'M2', 'LA', 'V0', 'CL', 'HT', 'OS / (NUEVO)'], 'BRENDA': ['BO', 'M4', 'D9', 'AM'], 'ISIS LOPEZ': ['F2'], 'MARITZA': ['70'], 'CHAYO': ['V8', 'J5', 'G6', 'CZ', 'A2'], 'BLANKY RUIZ': ['BZ', 'M#', 'ZR', '19', 'MY', 'F6', 'RZ', '18', 'JZ'], 'BRIGITTE': ['F4'], 'CHRISTIAN BUSTAMANTE': ['M$', 'MA', 'GO', 'L2'], 'JINMARIS': ['M4'], 'YADI': ['JS', 'VE', '00', '4G', 'LH'], 'YANE': ['YE'], 'BUENO': ['S7', 'C£'], 'LUISANA ROMERO': ['P6', 'M7', 'E1', 'EA', '$$'], 'DAYANA': ['15'], 'ANDREA': ['MR'], 'CRISTY': ['AN'], 'NATASHA': ['D$', 'PX'], 'OSMANY': ['R4', 'J8', '18', 'M9 / (NUEVO)'], 'HILLARY NICHOLE': ['CA'], 'AHSLIN GIRON': ['G&'], 'YESSICA': ['YZ'], 'LIZ BRAVO': ['ES', 'NS', 'RL', 'TI'], 'SUN': ['G0'], 'LAURIS ELIZABETH': ['WQ'], 'KEYLA PEREZ': ['TM'], 'MAURA OCHOA': ['12', 'N1'], 'PAUSINI': ['PO', 'J0'], 'ARLIN': ['AO'], 'DORIS': ['JUGADORA']}
+2024-09-08 01:39:54,256 - info_logger - INFO - Tipos procesados: {'GLENDY': {'Regular': 4}, 'BERE': {'Regular': 4}, 'DENISSE VALENZUELA': {'Regular': 10, 'Nuevo': 5}, 'BRENDA': {'Regular': 4}, 'ISIS LOPEZ': {'Regular': 1}, 'MARITZA': {'Regular': 1}, 'CHAYO': {'Regular': 5}, 'BLANKY RUIZ': {'Regular': 9}, 'BRIGITTE': {'Regular': 1}, 'CHRISTIAN BUSTAMANTE': {'Regular': 4}, 'JINMARIS': {'Regular': 1}, 'YADI': {'Regular': 5}, 'YANE': {'Regular': 1}, 'BUENO': {'Regular': 2}, 'LUISANA ROMERO': {'Regular': 5}, 'DAYANA': {'Regular': 1}, 'ANDREA': {'Regular': 1}, 'CRISTY': {'Regular': 1}, 'NATASHA': {'Regular': 2}, 'OSMANY': {'Regular': 3, 'Nuevo': 5}, 'HILLARY NICHOLE': {'Regular': 1}, 'AHSLIN GIRON': {'Regular': 1}, 'YESSICA': {'Regular': 1}, 'LIZ BRAVO': {'Regular': 4}, 'SUN': {'Regular': 1}, 'LAURIS ELIZABETH': {'Regular': 1}, 'KEYLA PEREZ': {'Regular': 1}, 'MAURA OCHOA': {'Regular': 2}, 'PAUSINI': {'Regular': 2}, 'ARLIN': {'Regular': 1}, 'DORIS': {'Jugador': 0}}
+2024-09-08 01:39:54,262 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:39:54,276 - info_logger - INFO - DataFrame guardado correctamente en data/resultados.csv
+2024-09-08 01:39:54,290 - info_logger - INFO - DataFrame guardado correctamente en data/logs.csv
+2024-09-08 01:39:54,290 - info_logger - INFO - Log creado correctamente en data/logs.csv
+2024-09-08 01:39:54,290 - info_logger - INFO - Resultados actualizados correctamente.
+2024-09-08 01:40:02,446 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 01:40:02,450 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 02:29:49,787 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:29:49,793 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 02:29:50,948 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:29:50,951 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 02:33:03,967 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:33:06,048 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:33:06,589 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:33:07,047 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:33:11,751 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:35:37,306 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:35:37,311 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 02:44:32,043 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:44:32,047 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 02:45:27,735 - info_logger - INFO - Puntos calculados para el jugador GLENDY: [1, 1, 1, 1]
+2024-09-08 02:45:27,735 - info_logger - INFO - Tipos calculados para el jugador GLENDY: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,736 - info_logger - INFO - Puntos calculados para el jugador BERE: [1, 1, 1, 1]
+2024-09-08 02:45:27,736 - info_logger - INFO - Tipos calculados para el jugador BERE: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,736 - info_logger - INFO - Puntos calculados para el jugador DENISSE VALENZUELA: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 5]
+2024-09-08 02:45:27,736 - info_logger - INFO - Tipos calculados para el jugador DENISSE VALENZUELA: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 02:45:27,736 - info_logger - INFO - Puntos calculados para el jugador BRENDA: [1, 1, 1, 1]
+2024-09-08 02:45:27,737 - info_logger - INFO - Tipos calculados para el jugador BRENDA: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,737 - info_logger - INFO - Puntos calculados para el jugador ISIS LOPEZ: [1]
+2024-09-08 02:45:27,737 - info_logger - INFO - Tipos calculados para el jugador ISIS LOPEZ: ['Regular']
+2024-09-08 02:45:27,737 - info_logger - INFO - Puntos calculados para el jugador MARITZA: [1]
+2024-09-08 02:45:27,737 - info_logger - INFO - Tipos calculados para el jugador MARITZA: ['Regular']
+2024-09-08 02:45:27,738 - info_logger - INFO - Puntos calculados para el jugador CHAYO: [1, 1, 1, 1, 1]
+2024-09-08 02:45:27,738 - info_logger - INFO - Tipos calculados para el jugador CHAYO: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,738 - info_logger - INFO - Puntos calculados para el jugador BLANKY RUIZ: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+2024-09-08 02:45:27,738 - info_logger - INFO - Tipos calculados para el jugador BLANKY RUIZ: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,738 - info_logger - INFO - Puntos calculados para el jugador BRIGITTE: [1]
+2024-09-08 02:45:27,738 - info_logger - INFO - Tipos calculados para el jugador BRIGITTE: ['Regular']
+2024-09-08 02:45:27,739 - info_logger - INFO - Puntos calculados para el jugador CHRISTIAN BUSTAMANTE: [1, 1, 1, 1]
+2024-09-08 02:45:27,739 - info_logger - INFO - Tipos calculados para el jugador CHRISTIAN BUSTAMANTE: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,739 - info_logger - INFO - Puntos calculados para el jugador JINMARIS: [1]
+2024-09-08 02:45:27,739 - info_logger - INFO - Tipos calculados para el jugador JINMARIS: ['Regular']
+2024-09-08 02:45:27,740 - info_logger - INFO - Puntos calculados para el jugador YADI: [1, 1, 1, 1, 1]
+2024-09-08 02:45:27,740 - info_logger - INFO - Tipos calculados para el jugador YADI: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,740 - info_logger - INFO - Puntos calculados para el jugador YANE: [1]
+2024-09-08 02:45:27,740 - info_logger - INFO - Tipos calculados para el jugador YANE: ['Regular']
+2024-09-08 02:45:27,741 - info_logger - INFO - Puntos calculados para el jugador BUENO: [1, 1]
+2024-09-08 02:45:27,741 - info_logger - INFO - Tipos calculados para el jugador BUENO: ['Regular', 'Regular']
+2024-09-08 02:45:27,741 - info_logger - INFO - Puntos calculados para el jugador LUISANA ROMERO: [1, 1, 1, 1, 1]
+2024-09-08 02:45:27,741 - info_logger - INFO - Tipos calculados para el jugador LUISANA ROMERO: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,741 - info_logger - INFO - Puntos calculados para el jugador DAYANA: [1]
+2024-09-08 02:45:27,741 - info_logger - INFO - Tipos calculados para el jugador DAYANA: ['Regular']
+2024-09-08 02:45:27,741 - info_logger - INFO - Puntos calculados para el jugador ANDREA: [1]
+2024-09-08 02:45:27,741 - info_logger - INFO - Tipos calculados para el jugador ANDREA: ['Regular']
+2024-09-08 02:45:27,741 - info_logger - INFO - Puntos calculados para el jugador CRISTY: [1]
+2024-09-08 02:45:27,742 - info_logger - INFO - Tipos calculados para el jugador CRISTY: ['Regular']
+2024-09-08 02:45:27,742 - info_logger - INFO - Puntos calculados para el jugador NATASHA: [1, 1]
+2024-09-08 02:45:27,742 - info_logger - INFO - Tipos calculados para el jugador NATASHA: ['Regular', 'Regular']
+2024-09-08 02:45:27,742 - info_logger - INFO - Puntos calculados para el jugador OSMANY: [1, 1, 1, 5]
+2024-09-08 02:45:27,742 - info_logger - INFO - Tipos calculados para el jugador OSMANY: ['Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 02:45:27,742 - info_logger - INFO - Puntos calculados para el jugador HILLARY NICHOLE: [1]
+2024-09-08 02:45:27,742 - info_logger - INFO - Tipos calculados para el jugador HILLARY NICHOLE: ['Regular']
+2024-09-08 02:45:27,742 - info_logger - INFO - Puntos calculados para el jugador AHSLIN GIRON: [1]
+2024-09-08 02:45:27,742 - info_logger - INFO - Tipos calculados para el jugador AHSLIN GIRON: ['Regular']
+2024-09-08 02:45:27,743 - info_logger - INFO - Puntos calculados para el jugador YESSICA: [1]
+2024-09-08 02:45:27,743 - info_logger - INFO - Tipos calculados para el jugador YESSICA: ['Regular']
+2024-09-08 02:45:27,743 - info_logger - INFO - Puntos calculados para el jugador LIZ BRAVO: [1, 1, 1, 1]
+2024-09-08 02:45:27,743 - info_logger - INFO - Tipos calculados para el jugador LIZ BRAVO: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:45:27,743 - info_logger - INFO - Puntos calculados para el jugador SUN: [1]
+2024-09-08 02:45:27,743 - info_logger - INFO - Tipos calculados para el jugador SUN: ['Regular']
+2024-09-08 02:45:27,743 - info_logger - INFO - Puntos calculados para el jugador LAURIS ELIZABETH: [1]
+2024-09-08 02:45:27,743 - info_logger - INFO - Tipos calculados para el jugador LAURIS ELIZABETH: ['Regular']
+2024-09-08 02:45:27,743 - info_logger - INFO - Puntos calculados para el jugador KEYLA PEREZ: [1]
+2024-09-08 02:45:27,744 - info_logger - INFO - Tipos calculados para el jugador KEYLA PEREZ: ['Regular']
+2024-09-08 02:45:27,744 - info_logger - INFO - Puntos calculados para el jugador MAURA OCHOA: [1, 1]
+2024-09-08 02:45:27,744 - info_logger - INFO - Tipos calculados para el jugador MAURA OCHOA: ['Regular', 'Regular']
+2024-09-08 02:45:27,744 - info_logger - INFO - Puntos calculados para el jugador PAUSINI: [1, 1]
+2024-09-08 02:45:27,744 - info_logger - INFO - Tipos calculados para el jugador PAUSINI: ['Regular', 'Regular']
+2024-09-08 02:45:27,744 - info_logger - INFO - Puntos calculados para el jugador ARLIN: [1]
+2024-09-08 02:45:27,745 - info_logger - INFO - Tipos calculados para el jugador ARLIN: ['Regular']
+2024-09-08 02:45:27,754 - info_logger - INFO - Resultados procesados:                  Jugador  Puntos
+0                 GLENDY       4
+1                   BERE       4
+2     DENISSE VALENZUELA      15
+3                 BRENDA       4
+4             ISIS LOPEZ       1
+5                MARITZA       1
+6                  CHAYO       5
+7            BLANKY RUIZ       9
+8               BRIGITTE       1
+9   CHRISTIAN BUSTAMANTE       4
+10              JINMARIS       1
+11                  YADI       5
+12                  YANE       1
+13                 BUENO       2
+14        LUISANA ROMERO       5
+15                DAYANA       1
+16                ANDREA       1
+17                CRISTY       1
+18               NATASHA       2
+19                OSMANY       8
+20       HILLARY NICHOLE       1
+21          AHSLIN GIRON       1
+22               YESSICA       1
+23             LIZ BRAVO       4
+24                   SUN       1
+25      LAURIS ELIZABETH       1
+26           KEYLA PEREZ       1
+27           MAURA OCHOA       2
+28               PAUSINI       2
+29                 ARLIN       1
+2024-09-08 02:45:27,757 - info_logger - INFO - Data procesados: {'GLENDY': ['J4', 'J2', 'Z7', '11'], 'BERE': ['BO', '@$', 'E9', 'TS'], 'DENISSE VALENZUELA': ['NI', 'M5', 'G*', 'C3', 'D2', 'M2', 'LA', 'V0', 'CL', 'HT', 'OS / (NUEVO)'], 'BRENDA': ['BO', 'M4', 'D9', 'AM'], 'ISIS LOPEZ': ['F2'], 'MARITZA': ['70'], 'CHAYO': ['V8', 'J5', 'G6', 'CZ', 'A2'], 'BLANKY RUIZ': ['BZ', 'M#', 'ZR', '19', 'MY', 'F6', 'RZ', '18', 'JZ'], 'BRIGITTE': ['F4'], 'CHRISTIAN BUSTAMANTE': ['M$', 'MA', 'GO', 'L2'], 'JINMARIS': ['M4'], 'YADI': ['JS', 'VE', '00', '4G', 'LH'], 'YANE': ['YE'], 'BUENO': ['S7', 'C£'], 'LUISANA ROMERO': ['P6', 'M7', 'E1', 'EA', '$$'], 'DAYANA': ['15'], 'ANDREA': ['MR'], 'CRISTY': ['AN'], 'NATASHA': ['D$', 'PX'], 'OSMANY': ['R4', 'J8', '18', 'M9 / (NUEVO)'], 'HILLARY NICHOLE': ['CA'], 'AHSLIN GIRON': ['G&'], 'YESSICA': ['YZ'], 'LIZ BRAVO': ['ES', 'NS', 'RL', 'TI'], 'SUN': ['G0'], 'LAURIS ELIZABETH': ['WQ'], 'KEYLA PEREZ': ['TM'], 'MAURA OCHOA': ['12', 'N1'], 'PAUSINI': ['PO', 'J0'], 'ARLIN': ['AO']}
+2024-09-08 02:45:27,757 - info_logger - INFO - Tipos procesados: {'GLENDY': {'Regular': 4}, 'BERE': {'Regular': 4}, 'DENISSE VALENZUELA': {'Regular': 10, 'Nuevo': 5}, 'BRENDA': {'Regular': 4}, 'ISIS LOPEZ': {'Regular': 1}, 'MARITZA': {'Regular': 1}, 'CHAYO': {'Regular': 5}, 'BLANKY RUIZ': {'Regular': 9}, 'BRIGITTE': {'Regular': 1}, 'CHRISTIAN BUSTAMANTE': {'Regular': 4}, 'JINMARIS': {'Regular': 1}, 'YADI': {'Regular': 5}, 'YANE': {'Regular': 1}, 'BUENO': {'Regular': 2}, 'LUISANA ROMERO': {'Regular': 5}, 'DAYANA': {'Regular': 1}, 'ANDREA': {'Regular': 1}, 'CRISTY': {'Regular': 1}, 'NATASHA': {'Regular': 2}, 'OSMANY': {'Regular': 3, 'Nuevo': 5}, 'HILLARY NICHOLE': {'Regular': 1}, 'AHSLIN GIRON': {'Regular': 1}, 'YESSICA': {'Regular': 1}, 'LIZ BRAVO': {'Regular': 4}, 'SUN': {'Regular': 1}, 'LAURIS ELIZABETH': {'Regular': 1}, 'KEYLA PEREZ': {'Regular': 1}, 'MAURA OCHOA': {'Regular': 2}, 'PAUSINI': {'Regular': 2}, 'ARLIN': {'Regular': 1}}
+2024-09-08 02:45:27,760 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:45:27,775 - info_logger - INFO - DataFrame guardado correctamente en data/resultados.csv
+2024-09-08 02:45:27,790 - info_logger - INFO - DataFrame guardado correctamente en data/logs.csv
+2024-09-08 02:45:27,791 - info_logger - INFO - Log creado correctamente en data/logs.csv
+2024-09-08 02:45:27,791 - info_logger - INFO - Resultados actualizados correctamente.
+2024-09-08 02:45:52,604 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:45:52,607 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 02:51:29,875 - info_logger - INFO - Puntos calculados para el jugador BERE: [1, 1, 1]
+2024-09-08 02:51:29,876 - info_logger - INFO - Tipos calculados para el jugador BERE: ['Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,876 - info_logger - INFO - Puntos calculados para el jugador DORIS: [1, 1, 1]
+2024-09-08 02:51:29,876 - info_logger - INFO - Tipos calculados para el jugador DORIS: ['Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,877 - info_logger - INFO - Puntos calculados para el jugador LEIDIMAR: [1, 1, 1]
+2024-09-08 02:51:29,877 - info_logger - INFO - Tipos calculados para el jugador LEIDIMAR: ['Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,877 - info_logger - INFO - Puntos calculados para el jugador MAURA OCHOA: [1, 1, 1, 1, 1]
+2024-09-08 02:51:29,877 - info_logger - INFO - Tipos calculados para el jugador MAURA OCHOA: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,877 - info_logger - INFO - Puntos calculados para el jugador DIANA: [1]
+2024-09-08 02:51:29,877 - info_logger - INFO - Tipos calculados para el jugador DIANA: ['Regular']
+2024-09-08 02:51:29,877 - info_logger - INFO - Puntos calculados para el jugador CHRISTIAN BUSTAMANTE: [1, 1, 1, 1, 1, 1, 1]
+2024-09-08 02:51:29,878 - info_logger - INFO - Tipos calculados para el jugador CHRISTIAN BUSTAMANTE: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,878 - info_logger - INFO - Puntos calculados para el jugador JADE ARAGON: [1]
+2024-09-08 02:51:29,878 - info_logger - INFO - Tipos calculados para el jugador JADE ARAGON: ['Regular']
+2024-09-08 02:51:29,878 - info_logger - INFO - Puntos calculados para el jugador BRIGITTE: [1, 1, 5]
+2024-09-08 02:51:29,879 - info_logger - INFO - Tipos calculados para el jugador BRIGITTE: ['Regular', 'Regular', 'Nuevo']
+2024-09-08 02:51:29,879 - info_logger - INFO - Puntos calculados para el jugador LUISANA ROMERO: [1, 1, 1]
+2024-09-08 02:51:29,879 - info_logger - INFO - Tipos calculados para el jugador LUISANA ROMERO: ['Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,879 - info_logger - INFO - Puntos calculados para el jugador BUENO: [1, 1, 1]
+2024-09-08 02:51:29,880 - info_logger - INFO - Tipos calculados para el jugador BUENO: ['Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,880 - info_logger - INFO - Puntos calculados para el jugador ISIS LOPEZ: [1]
+2024-09-08 02:51:29,880 - info_logger - INFO - Tipos calculados para el jugador ISIS LOPEZ: ['Regular']
+2024-09-08 02:51:29,881 - info_logger - INFO - Puntos calculados para el jugador PAUSINI: [1, 1]
+2024-09-08 02:51:29,881 - info_logger - INFO - Tipos calculados para el jugador PAUSINI: ['Regular', 'Regular']
+2024-09-08 02:51:29,881 - info_logger - INFO - Puntos calculados para el jugador YADI: [1, 1, 1, 1, 1, 1]
+2024-09-08 02:51:29,881 - info_logger - INFO - Tipos calculados para el jugador YADI: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,882 - info_logger - INFO - Puntos calculados para el jugador BRENDA: [1, 1]
+2024-09-08 02:51:29,882 - info_logger - INFO - Tipos calculados para el jugador BRENDA: ['Regular', 'Regular']
+2024-09-08 02:51:29,882 - info_logger - INFO - Puntos calculados para el jugador YANE: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+2024-09-08 02:51:29,882 - info_logger - INFO - Tipos calculados para el jugador YANE: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,883 - info_logger - INFO - Puntos calculados para el jugador KEYLA PEREZ: [1, 1, 1, 1, 1]
+2024-09-08 02:51:29,883 - info_logger - INFO - Tipos calculados para el jugador KEYLA PEREZ: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,883 - info_logger - INFO - Puntos calculados para el jugador CHAYO: [1, 1, 1, 1]
+2024-09-08 02:51:29,883 - info_logger - INFO - Tipos calculados para el jugador CHAYO: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,883 - info_logger - INFO - Puntos calculados para el jugador ANDREA: [1]
+2024-09-08 02:51:29,884 - info_logger - INFO - Tipos calculados para el jugador ANDREA: ['Regular']
+2024-09-08 02:51:29,884 - info_logger - INFO - Puntos calculados para el jugador IDEY: [1]
+2024-09-08 02:51:29,884 - info_logger - INFO - Tipos calculados para el jugador IDEY: ['Regular']
+2024-09-08 02:51:29,884 - info_logger - INFO - Puntos calculados para el jugador INEZ: [1, 1, 1]
+2024-09-08 02:51:29,885 - info_logger - INFO - Tipos calculados para el jugador INEZ: ['Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,885 - info_logger - INFO - Puntos calculados para el jugador KARINA: [1]
+2024-09-08 02:51:29,885 - info_logger - INFO - Tipos calculados para el jugador KARINA: ['Regular']
+2024-09-08 02:51:29,886 - info_logger - INFO - Puntos calculados para el jugador DAYANA: [1]
+2024-09-08 02:51:29,886 - info_logger - INFO - Tipos calculados para el jugador DAYANA: ['Regular']
+2024-09-08 02:51:29,886 - info_logger - INFO - Puntos calculados para el jugador ARLIN: [1]
+2024-09-08 02:51:29,886 - info_logger - INFO - Tipos calculados para el jugador ARLIN: ['Regular']
+2024-09-08 02:51:29,887 - info_logger - INFO - Puntos calculados para el jugador LIZ BRAVO: [1]
+2024-09-08 02:51:29,887 - info_logger - INFO - Tipos calculados para el jugador LIZ BRAVO: ['Regular']
+2024-09-08 02:51:29,887 - info_logger - INFO - Puntos calculados para el jugador NATASHA: [1]
+2024-09-08 02:51:29,887 - info_logger - INFO - Tipos calculados para el jugador NATASHA: ['Regular']
+2024-09-08 02:51:29,887 - info_logger - INFO - Puntos calculados para el jugador SARAHI: [1]
+2024-09-08 02:51:29,887 - info_logger - INFO - Tipos calculados para el jugador SARAHI: ['Regular']
+2024-09-08 02:51:29,888 - info_logger - INFO - Puntos calculados para el jugador GEORGINA RIZZO: [1]
+2024-09-08 02:51:29,888 - info_logger - INFO - Tipos calculados para el jugador GEORGINA RIZZO: ['Regular']
+2024-09-08 02:51:29,888 - info_logger - INFO - Puntos calculados para el jugador MARITZA: [1]
+2024-09-08 02:51:29,888 - info_logger - INFO - Tipos calculados para el jugador MARITZA: ['Regular']
+2024-09-08 02:51:29,888 - info_logger - INFO - Puntos calculados para el jugador BLANKY RUIZ: [1, 1, 1, 1, 1]
+2024-09-08 02:51:29,888 - info_logger - INFO - Tipos calculados para el jugador BLANKY RUIZ: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 02:51:29,889 - info_logger - INFO - Puntos calculados para el jugador YENNIFER: [1]
+2024-09-08 02:51:29,889 - info_logger - INFO - Tipos calculados para el jugador YENNIFER: ['Regular']
+2024-09-08 02:51:29,889 - info_logger - INFO - Puntos calculados para el jugador YESSICA: [1]
+2024-09-08 02:51:29,889 - info_logger - INFO - Tipos calculados para el jugador YESSICA: ['Regular']
+2024-09-08 02:51:29,889 - info_logger - INFO - Puntos calculados para el jugador EDIXIA MARADIAGA: [5]
+2024-09-08 02:51:29,889 - info_logger - INFO - Tipos calculados para el jugador EDIXIA MARADIAGA: ['Nuevo']
+2024-09-08 02:51:29,889 - info_logger - INFO - Puntos calculados para el jugador DAYANA V: [1]
+2024-09-08 02:51:29,890 - info_logger - INFO - Tipos calculados para el jugador DAYANA V: ['Regular']
+2024-09-08 02:51:29,904 - info_logger - INFO - Puntos eliminados para el jugador KIM
+2024-09-08 02:51:29,904 - info_logger - INFO - Puntos calculados para el jugador KIM: [0]
+2024-09-08 02:51:29,904 - info_logger - INFO - Tipos calculados para el jugador KIM: ['Jugador']
+2024-09-08 02:51:29,909 - info_logger - INFO - Resultados procesados:                  Jugador  Puntos
+0                   BERE       3
+1                  DORIS       3
+2               LEIDIMAR       3
+3            MAURA OCHOA       5
+4                  DIANA       1
+5   CHRISTIAN BUSTAMANTE       7
+6            JADE ARAGON       1
+7               BRIGITTE       7
+8         LUISANA ROMERO       3
+9                  BUENO       3
+10            ISIS LOPEZ       1
+11               PAUSINI       2
+12                  YADI       6
+13                BRENDA       2
+14                  YANE       9
+15           KEYLA PEREZ       5
+16                 CHAYO       4
+17                ANDREA       1
+18                  IDEY       1
+19                  INEZ       3
+20                KARINA       1
+21                DAYANA       1
+22                 ARLIN       1
+23             LIZ BRAVO       1
+24               NATASHA       1
+25                SARAHI       1
+26        GEORGINA RIZZO       1
+27               MARITZA       1
+28           BLANKY RUIZ       5
+29              YENNIFER       1
+30               YESSICA       1
+31      EDIXIA MARADIAGA       5
+32              DAYANA V       1
+33                   KIM       0
+2024-09-08 02:51:29,912 - info_logger - INFO - Data procesados: {'BERE': ['@***$', 'B**O', 'R**5'], 'DORIS': ['I**I', 'Y**O', 'O**2'], 'LEIDIMAR': ['U**7', 'C**6', '1**9'], 'MAURA OCHOA': ['K**Y', 'A**A', '1**2', 'A**Z', 'J**0'], 'DIANA': ['R**A'], 'CHRISTIAN BUSTAMANTE': ['M**@', 'C**7', 'L**2', 'G**8', 'N**!', 'A**Y', 'S**5'], 'JADE ARAGON': ['J**&'], 'BRIGITTE': ['F**E', 'Y**S', 'C**4 / (NUEVO)'], 'LUISANA ROMERO': ['$**$', 'J**4', 'M**7'], 'BUENO': ['C**£', 'L**I', 'R**2'], 'ISIS LOPEZ': ['F**2'], 'PAUSINI': ['P**O', 'J**0'], 'YADI': ['Y**I', '0**0', 'N**I', 'M**6', 'S**O', 'V**E'], 'BRENDA': ['B**2', 'M**4'], 'YANE': ['Y**E', 'K**4', 'R**O', 'W**2', 'E**Z', 'L**T', 'Y**1', 'D**2', 'J**0'], 'KEYLA PEREZ': ['M**L', 'D**F', 'I**8', 'T**M', 'F**8'], 'CHAYO': ['C**Z', 'L**5', 'G**6', 'A**2'], 'ANDREA': ['B**Y'], 'IDEY': ['H**R'], 'INEZ': ['N**8', 'G**6', 'D**7'], 'KARINA': ['K**A'], 'DAYANA': ['D**A'], 'ARLIN': ['A**O'], 'LIZ BRAVO': ['R**L'], 'NATASHA': ['E**7'], 'SARAHI': ['S**3'], 'GEORGINA RIZZO': ['1**4'], 'MARITZA': ['M**!'], 'BLANKY RUIZ': ['B**Z', 'M**#', 'R**Z', '1**9', 'J**Z'], 'YENNIFER': ['P***'], 'YESSICA': ['Y**Z'], 'EDIXIA MARADIAGA': ['E**0 / (NUEVO)'], 'DAYANA V': ['D**7'], 'KIM': ['JUGADORA']}
+2024-09-08 02:51:29,912 - info_logger - INFO - Tipos procesados: {'BERE': {'Regular': 3}, 'DORIS': {'Regular': 3}, 'LEIDIMAR': {'Regular': 3}, 'MAURA OCHOA': {'Regular': 5}, 'DIANA': {'Regular': 1}, 'CHRISTIAN BUSTAMANTE': {'Regular': 7}, 'JADE ARAGON': {'Regular': 1}, 'BRIGITTE': {'Regular': 2, 'Nuevo': 5}, 'LUISANA ROMERO': {'Regular': 3}, 'BUENO': {'Regular': 3}, 'ISIS LOPEZ': {'Regular': 1}, 'PAUSINI': {'Regular': 2}, 'YADI': {'Regular': 6}, 'BRENDA': {'Regular': 2}, 'YANE': {'Regular': 9}, 'KEYLA PEREZ': {'Regular': 5}, 'CHAYO': {'Regular': 4}, 'ANDREA': {'Regular': 1}, 'IDEY': {'Regular': 1}, 'INEZ': {'Regular': 3}, 'KARINA': {'Regular': 1}, 'DAYANA': {'Regular': 1}, 'ARLIN': {'Regular': 1}, 'LIZ BRAVO': {'Regular': 1}, 'NATASHA': {'Regular': 1}, 'SARAHI': {'Regular': 1}, 'GEORGINA RIZZO': {'Regular': 1}, 'MARITZA': {'Regular': 1}, 'BLANKY RUIZ': {'Regular': 5}, 'YENNIFER': {'Regular': 1}, 'YESSICA': {'Regular': 1}, 'EDIXIA MARADIAGA': {'Nuevo': 5}, 'DAYANA V': {'Regular': 1}, 'KIM': {'Jugador': 0}}
+2024-09-08 02:51:29,915 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:51:29,926 - info_logger - INFO - DataFrame guardado correctamente en data/resultados.csv
+2024-09-08 02:51:29,940 - info_logger - INFO - DataFrame guardado correctamente en data/logs.csv
+2024-09-08 02:51:29,940 - info_logger - INFO - Log creado correctamente en data/logs.csv
+2024-09-08 02:51:29,940 - info_logger - INFO - Resultados actualizados correctamente.
+2024-09-08 02:51:41,708 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 02:51:41,711 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 03:07:47,581 - info_logger - INFO - Puntos calculados para el jugador ANDREA: [1]
+2024-09-08 03:07:47,582 - info_logger - INFO - Tipos calculados para el jugador ANDREA: ['Regular']
+2024-09-08 03:07:47,582 - info_logger - INFO - Puntos calculados para el jugador KEYLA PEREZ: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+2024-09-08 03:07:47,582 - info_logger - INFO - Tipos calculados para el jugador KEYLA PEREZ: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,583 - info_logger - INFO - Puntos calculados para el jugador YANE: [1, 1, 1, 1, 1]
+2024-09-08 03:07:47,583 - info_logger - INFO - Tipos calculados para el jugador YANE: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,583 - info_logger - INFO - Puntos calculados para el jugador DENISSE VALENZUELA: [1, 1, 1, 1, 1]
+2024-09-08 03:07:47,583 - info_logger - INFO - Tipos calculados para el jugador DENISSE VALENZUELA: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,584 - info_logger - INFO - Puntos calculados para el jugador BERE: [1, 1, 1, 1, 1]
+2024-09-08 03:07:47,584 - info_logger - INFO - Tipos calculados para el jugador BERE: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,584 - info_logger - INFO - Puntos calculados para el jugador SUN: [1]
+2024-09-08 03:07:47,584 - info_logger - INFO - Tipos calculados para el jugador SUN: ['Regular']
+2024-09-08 03:07:47,585 - info_logger - INFO - Puntos calculados para el jugador BUENO: [1, 1, 1]
+2024-09-08 03:07:47,585 - info_logger - INFO - Tipos calculados para el jugador BUENO: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,585 - info_logger - INFO - Puntos calculados para el jugador BRIGITTE: [1, 1, 1, 1, 1, 1]
+2024-09-08 03:07:47,585 - info_logger - INFO - Tipos calculados para el jugador BRIGITTE: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,586 - info_logger - INFO - Puntos calculados para el jugador ISIS LOPEZ: [1]
+2024-09-08 03:07:47,586 - info_logger - INFO - Tipos calculados para el jugador ISIS LOPEZ: ['Regular']
+2024-09-08 03:07:47,586 - info_logger - INFO - Puntos calculados para el jugador YENNIFER: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+2024-09-08 03:07:47,586 - info_logger - INFO - Tipos calculados para el jugador YENNIFER: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,587 - info_logger - INFO - Puntos calculados para el jugador LEIDIMAR: [1, 1, 1, 1, 1]
+2024-09-08 03:07:47,587 - info_logger - INFO - Tipos calculados para el jugador LEIDIMAR: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,587 - info_logger - INFO - Puntos calculados para el jugador MARISOL: [1, 1, 1, 1, 5]
+2024-09-08 03:07:47,587 - info_logger - INFO - Tipos calculados para el jugador MARISOL: ['Regular', 'Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 03:07:47,588 - info_logger - INFO - Puntos calculados para el jugador LUISANA ROMERO: [1]
+2024-09-08 03:07:47,588 - info_logger - INFO - Tipos calculados para el jugador LUISANA ROMERO: ['Regular']
+2024-09-08 03:07:47,588 - info_logger - INFO - Puntos calculados para el jugador KIM: [1, 1, 1]
+2024-09-08 03:07:47,588 - info_logger - INFO - Tipos calculados para el jugador KIM: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,589 - info_logger - INFO - Puntos calculados para el jugador YADI: [1, 1, 1]
+2024-09-08 03:07:47,589 - info_logger - INFO - Tipos calculados para el jugador YADI: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,589 - info_logger - INFO - Puntos calculados para el jugador DIANA: [1]
+2024-09-08 03:07:47,589 - info_logger - INFO - Tipos calculados para el jugador DIANA: ['Regular']
+2024-09-08 03:07:47,590 - info_logger - INFO - Puntos calculados para el jugador SAMMY: [1, 1]
+2024-09-08 03:07:47,590 - info_logger - INFO - Tipos calculados para el jugador SAMMY: ['Regular', 'Regular']
+2024-09-08 03:07:47,590 - info_logger - INFO - Puntos calculados para el jugador JADE ARAGON: [1]
+2024-09-08 03:07:47,590 - info_logger - INFO - Tipos calculados para el jugador JADE ARAGON: ['Regular']
+2024-09-08 03:07:47,590 - info_logger - INFO - Puntos calculados para el jugador CRISTY: [1, 1]
+2024-09-08 03:07:47,591 - info_logger - INFO - Tipos calculados para el jugador CRISTY: ['Regular', 'Regular']
+2024-09-08 03:07:47,591 - info_logger - INFO - Puntos calculados para el jugador BLANKY RUIZ: [1, 1, 1, 1, 1, 1]
+2024-09-08 03:07:47,591 - info_logger - INFO - Tipos calculados para el jugador BLANKY RUIZ: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,592 - info_logger - INFO - Puntos calculados para el jugador GLENDY: [1, 1, 1]
+2024-09-08 03:07:47,592 - info_logger - INFO - Tipos calculados para el jugador GLENDY: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,592 - info_logger - INFO - Puntos calculados para el jugador MARIE KREATIONS: [1]
+2024-09-08 03:07:47,592 - info_logger - INFO - Tipos calculados para el jugador MARIE KREATIONS: ['Regular']
+2024-09-08 03:07:47,592 - info_logger - INFO - Puntos calculados para el jugador KARINA: [1]
+2024-09-08 03:07:47,593 - info_logger - INFO - Tipos calculados para el jugador KARINA: ['Regular']
+2024-09-08 03:07:47,593 - info_logger - INFO - Puntos calculados para el jugador INEZ: [1, 1]
+2024-09-08 03:07:47,593 - info_logger - INFO - Tipos calculados para el jugador INEZ: ['Regular', 'Regular']
+2024-09-08 03:07:47,593 - info_logger - INFO - Puntos calculados para el jugador MAURA OCHOA: [1, 1, 1, 1, 1, 1, 1]
+2024-09-08 03:07:47,594 - info_logger - INFO - Tipos calculados para el jugador MAURA OCHOA: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,594 - info_logger - INFO - Puntos calculados para el jugador HIJA DEL REY: [1]
+2024-09-08 03:07:47,594 - info_logger - INFO - Tipos calculados para el jugador HIJA DEL REY: ['Regular']
+2024-09-08 03:07:47,594 - info_logger - INFO - Puntos calculados para el jugador NATASHA: [1, 1, 1]
+2024-09-08 03:07:47,594 - info_logger - INFO - Tipos calculados para el jugador NATASHA: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:07:47,595 - info_logger - INFO - Puntos calculados para el jugador LIZ BRAVO: [1]
+2024-09-08 03:07:47,595 - info_logger - INFO - Tipos calculados para el jugador LIZ BRAVO: ['Regular']
+2024-09-08 03:07:47,595 - info_logger - INFO - Puntos calculados para el jugador MARITZA: [1, 1]
+2024-09-08 03:07:47,595 - info_logger - INFO - Tipos calculados para el jugador MARITZA: ['Regular', 'Regular']
+2024-09-08 03:07:47,596 - info_logger - INFO - Puntos calculados para el jugador NOHELIA: [5]
+2024-09-08 03:07:47,596 - info_logger - INFO - Tipos calculados para el jugador NOHELIA: ['Nuevo']
+2024-09-08 03:07:47,596 - info_logger - INFO - Puntos calculados para el jugador KRISMAR: [5]
+2024-09-08 03:07:47,596 - info_logger - INFO - Tipos calculados para el jugador KRISMAR: ['Nuevo']
+2024-09-08 03:07:47,612 - info_logger - INFO - Puntos eliminados para el jugador CHAYO
+2024-09-08 03:07:47,612 - info_logger - INFO - Puntos calculados para el jugador CHAYO: [0]
+2024-09-08 03:07:47,612 - info_logger - INFO - Tipos calculados para el jugador CHAYO: ['Jugador']
+2024-09-08 03:07:47,617 - info_logger - INFO - Resultados procesados:                Jugador  Puntos
+0               ANDREA       1
+1          KEYLA PEREZ      16
+2                 YANE       5
+3   DENISSE VALENZUELA       5
+4                 BERE       5
+5                  SUN       1
+6                BUENO       3
+7             BRIGITTE       6
+8           ISIS LOPEZ       1
+9             YENNIFER      10
+10            LEIDIMAR       5
+11             MARISOL       9
+12      LUISANA ROMERO       1
+13                 KIM       3
+14                YADI       3
+15               DIANA       1
+16               SAMMY       2
+17         JADE ARAGON       1
+18              CRISTY       2
+19         BLANKY RUIZ       6
+20              GLENDY       3
+21     MARIE KREATIONS       1
+22              KARINA       1
+23                INEZ       2
+24         MAURA OCHOA       7
+25        HIJA DEL REY       1
+26             NATASHA       3
+27           LIZ BRAVO       1
+28             MARITZA       2
+29             NOHELIA       5
+30             KRISMAR       5
+31               CHAYO       0
+2024-09-08 03:07:47,619 - info_logger - INFO - Data procesados: {'ANDREA': ['Y*G'], 'KEYLA PEREZ': ['R*H', 'L*1', 'T*M', 'K*6', 'L*0', 'S*H', 'F*8', 'Y*7', 'J*A', 'J*V', 'M*L', 'I*8', 'S*A', 'K*I', 'S*O', 'B*Z'], 'YANE': ['Y*E', 'S*E', 'A*3', 'A*9', 'F*A'], 'DENISSE VALENZUELA': ['M*5', 'O*R', 'D*2', 'G**', 'C*A'], 'BERE': ['T*S', 'B*@', 'E*9', 'F*9', 'B*O'], 'SUN': ['T*3'], 'BUENO': ['C*£', 'R*2', 'L*I'], 'BRIGITTE': ['R*A', 'Y*L', 'F*E', 'F*8', 'S*8', 'C*A'], 'ISIS LOPEZ': ['F*2'], 'YENNIFER': ['P**', 'B*2', 'L*7', 'J*0', '1*8', 'J*9', 'L*8', 'A*R', 'L*3', 'A*3'], 'LEIDIMAR': ['P*9', 'E*Z', 'M*S', 'J*P', 'T*3'], 'MARISOL': ['M*$', 'M*@', 'A*Y', 'N*!', 'E*8 / (NUEVO)'], 'LUISANA ROMERO': ['$*$'], 'KIM': ['K*2', 'O*P', 'B*C'], 'YADI': ['Y*I', '0*0', 'N*I'], 'DIANA': ['R*A'], 'SAMMY': ['1*4', 'S*%'], 'JADE ARAGON': ['J*&'], 'CRISTY': ['C*2', '$*2'], 'BLANKY RUIZ': ['B*Z', 'Z*R', '1*9', 'J*Z', 'M*Y', 'M*#'], 'GLENDY': ['A*1', 'R*1', 'F*7'], 'MARIE KREATIONS': ['K*7'], 'KARINA': ['K*A'], 'INEZ': ['M*Q', 'T*5'], 'MAURA OCHOA': ['J*0', '1*2', 'M*1', 'K*Y', 'N*1', 'A*2', 'B*7'], 'HIJA DEL REY': ['L*D'], 'NATASHA': ['1*6', 'V*9', 'S*3'], 'LIZ BRAVO': ['T*I'], 'MARITZA': ['M*!', '7*0'], 'NOHELIA': ['H*E / (NUEVO)'], 'KRISMAR': ['L*0 / (NUEVO)'], 'CHAYO': ['JUGADORA']}
+2024-09-08 03:07:47,619 - info_logger - INFO - Tipos procesados: {'ANDREA': {'Regular': 1}, 'KEYLA PEREZ': {'Regular': 16}, 'YANE': {'Regular': 5}, 'DENISSE VALENZUELA': {'Regular': 5}, 'BERE': {'Regular': 5}, 'SUN': {'Regular': 1}, 'BUENO': {'Regular': 3}, 'BRIGITTE': {'Regular': 6}, 'ISIS LOPEZ': {'Regular': 1}, 'YENNIFER': {'Regular': 10}, 'LEIDIMAR': {'Regular': 5}, 'MARISOL': {'Regular': 4, 'Nuevo': 5}, 'LUISANA ROMERO': {'Regular': 1}, 'KIM': {'Regular': 3}, 'YADI': {'Regular': 3}, 'DIANA': {'Regular': 1}, 'SAMMY': {'Regular': 2}, 'JADE ARAGON': {'Regular': 1}, 'CRISTY': {'Regular': 2}, 'BLANKY RUIZ': {'Regular': 6}, 'GLENDY': {'Regular': 3}, 'MARIE KREATIONS': {'Regular': 1}, 'KARINA': {'Regular': 1}, 'INEZ': {'Regular': 2}, 'MAURA OCHOA': {'Regular': 7}, 'HIJA DEL REY': {'Regular': 1}, 'NATASHA': {'Regular': 3}, 'LIZ BRAVO': {'Regular': 1}, 'MARITZA': {'Regular': 2}, 'NOHELIA': {'Nuevo': 5}, 'KRISMAR': {'Nuevo': 5}, 'CHAYO': {'Jugador': 0}}
+2024-09-08 03:07:47,621 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:07:47,631 - info_logger - INFO - DataFrame guardado correctamente en data/resultados.csv
+2024-09-08 03:07:47,642 - info_logger - INFO - DataFrame guardado correctamente en data/logs.csv
+2024-09-08 03:07:47,642 - info_logger - INFO - Log creado correctamente en data/logs.csv
+2024-09-08 03:07:47,642 - info_logger - INFO - Resultados actualizados correctamente.
+2024-09-08 03:07:59,289 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:07:59,292 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 03:34:52,661 - info_logger - INFO - Puntos calculados para el jugador SAMMY: [1, 1]
+2024-09-08 03:34:52,662 - info_logger - INFO - Tipos calculados para el jugador SAMMY: ['Regular', 'Regular']
+2024-09-08 03:34:52,662 - info_logger - INFO - Puntos calculados para el jugador HIJA DEL REY: [1]
+2024-09-08 03:34:52,662 - info_logger - INFO - Tipos calculados para el jugador HIJA DEL REY: ['Regular']
+2024-09-08 03:34:52,663 - info_logger - INFO - Puntos calculados para el jugador IDEY: [1, 1]
+2024-09-08 03:34:52,663 - info_logger - INFO - Tipos calculados para el jugador IDEY: ['Regular', 'Regular']
+2024-09-08 03:34:52,664 - info_logger - INFO - Puntos calculados para el jugador MARISOL: [1, 1, 1, 1, 1, 1, 5]
+2024-09-08 03:34:52,664 - info_logger - INFO - Tipos calculados para el jugador MARISOL: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 03:34:52,664 - info_logger - INFO - Puntos calculados para el jugador YANE: [1]
+2024-09-08 03:34:52,664 - info_logger - INFO - Tipos calculados para el jugador YANE: ['Regular']
+2024-09-08 03:34:52,665 - info_logger - INFO - Puntos calculados para el jugador BERE: [1, 1, 1, 1, 1, 1, 1]
+2024-09-08 03:34:52,665 - info_logger - INFO - Tipos calculados para el jugador BERE: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:34:52,665 - info_logger - INFO - Puntos calculados para el jugador BRENDA: [1, 1, 1, 1, 1, 1]
+2024-09-08 03:34:52,666 - info_logger - INFO - Tipos calculados para el jugador BRENDA: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:34:52,666 - info_logger - INFO - Puntos calculados para el jugador BRIGITTE: [1]
+2024-09-08 03:34:52,666 - info_logger - INFO - Tipos calculados para el jugador BRIGITTE: ['Regular']
+2024-09-08 03:34:52,666 - info_logger - INFO - Puntos calculados para el jugador MARIE KREATIONS: [1]
+2024-09-08 03:34:52,667 - info_logger - INFO - Tipos calculados para el jugador MARIE KREATIONS: ['Regular']
+2024-09-08 03:34:52,667 - info_logger - INFO - Puntos calculados para el jugador KIM: [1, 1, 1]
+2024-09-08 03:34:52,667 - info_logger - INFO - Tipos calculados para el jugador KIM: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:34:52,667 - info_logger - INFO - Puntos calculados para el jugador YADI: [1, 1, 1]
+2024-09-08 03:34:52,668 - info_logger - INFO - Tipos calculados para el jugador YADI: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:34:52,668 - info_logger - INFO - Puntos calculados para el jugador HILLARY NICHOLE: [1, 1]
+2024-09-08 03:34:52,668 - info_logger - INFO - Tipos calculados para el jugador HILLARY NICHOLE: ['Regular', 'Regular']
+2024-09-08 03:34:52,669 - info_logger - INFO - Puntos calculados para el jugador DIANA: [1]
+2024-09-08 03:34:52,669 - info_logger - INFO - Tipos calculados para el jugador DIANA: ['Regular']
+2024-09-08 03:34:52,669 - info_logger - INFO - Puntos calculados para el jugador YULIANA: [1]
+2024-09-08 03:34:52,670 - info_logger - INFO - Tipos calculados para el jugador YULIANA: ['Regular']
+2024-09-08 03:34:52,670 - info_logger - INFO - Puntos calculados para el jugador BUENO: [1, 1]
+2024-09-08 03:34:52,670 - info_logger - INFO - Tipos calculados para el jugador BUENO: ['Regular', 'Regular']
+2024-09-08 03:34:52,670 - info_logger - INFO - Puntos calculados para el jugador ALE: [1]
+2024-09-08 03:34:52,671 - info_logger - INFO - Tipos calculados para el jugador ALE: ['Regular']
+2024-09-08 03:34:52,671 - info_logger - INFO - Puntos calculados para el jugador JADE ARAGON: [1]
+2024-09-08 03:34:52,671 - info_logger - INFO - Tipos calculados para el jugador JADE ARAGON: ['Regular']
+2024-09-08 03:34:52,671 - info_logger - INFO - Puntos calculados para el jugador CHAYO: [1, 1, 1, 1, 1, 1, 5]
+2024-09-08 03:34:52,672 - info_logger - INFO - Tipos calculados para el jugador CHAYO: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 03:34:52,672 - info_logger - INFO - Puntos calculados para el jugador ANDREA: [1]
+2024-09-08 03:34:52,672 - info_logger - INFO - Tipos calculados para el jugador ANDREA: ['Regular']
+2024-09-08 03:34:52,673 - info_logger - INFO - Puntos calculados para el jugador BLANKY RUIZ: [1, 1, 1, 1]
+2024-09-08 03:34:52,673 - info_logger - INFO - Tipos calculados para el jugador BLANKY RUIZ: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:34:52,673 - info_logger - INFO - Puntos calculados para el jugador ANGELICA CHAVEZ: [1, 1]
+2024-09-08 03:34:52,674 - info_logger - INFO - Tipos calculados para el jugador ANGELICA CHAVEZ: ['Regular', 'Regular']
+2024-09-08 03:34:52,674 - info_logger - INFO - Puntos calculados para el jugador AHSLIN GIRON: [1]
+2024-09-08 03:34:52,674 - info_logger - INFO - Tipos calculados para el jugador AHSLIN GIRON: ['Regular']
+2024-09-08 03:34:52,674 - info_logger - INFO - Puntos calculados para el jugador ISIS LOPEZ: [1]
+2024-09-08 03:34:52,675 - info_logger - INFO - Tipos calculados para el jugador ISIS LOPEZ: ['Regular']
+2024-09-08 03:34:52,675 - info_logger - INFO - Puntos calculados para el jugador PAUSINI: [1]
+2024-09-08 03:34:52,675 - info_logger - INFO - Tipos calculados para el jugador PAUSINI: ['Regular']
+2024-09-08 03:34:52,675 - info_logger - INFO - Puntos calculados para el jugador SARAHI: [1]
+2024-09-08 03:34:52,676 - info_logger - INFO - Tipos calculados para el jugador SARAHI: ['Regular']
+2024-09-08 03:34:52,676 - info_logger - INFO - Puntos calculados para el jugador LIZ BRAVO: [1, 1, 1, 1, 1]
+2024-09-08 03:34:52,676 - info_logger - INFO - Tipos calculados para el jugador LIZ BRAVO: ['Regular', 'Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:34:52,677 - info_logger - INFO - Puntos calculados para el jugador KARINA: [1]
+2024-09-08 03:34:52,677 - info_logger - INFO - Tipos calculados para el jugador KARINA: ['Regular']
+2024-09-08 03:34:52,677 - info_logger - INFO - Puntos calculados para el jugador GEORGINA RIZZO: [1, 1, 1]
+2024-09-08 03:34:52,677 - info_logger - INFO - Tipos calculados para el jugador GEORGINA RIZZO: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:34:52,678 - info_logger - INFO - Puntos calculados para el jugador DENISSE VALENZUELA: [1, 1, 1, 5]
+2024-09-08 03:34:52,678 - info_logger - INFO - Tipos calculados para el jugador DENISSE VALENZUELA: ['Regular', 'Regular', 'Regular', 'Nuevo']
+2024-09-08 03:34:52,678 - info_logger - INFO - Puntos calculados para el jugador ROSS: [1]
+2024-09-08 03:34:52,678 - info_logger - INFO - Tipos calculados para el jugador ROSS: ['Regular']
+2024-09-08 03:34:52,679 - info_logger - INFO - Puntos calculados para el jugador LUISANA ROMERO: [1, 1, 1, 1]
+2024-09-08 03:34:52,679 - info_logger - INFO - Tipos calculados para el jugador LUISANA ROMERO: ['Regular', 'Regular', 'Regular', 'Regular']
+2024-09-08 03:34:52,679 - info_logger - INFO - Puntos calculados para el jugador DORIS: [1]
+2024-09-08 03:34:52,680 - info_logger - INFO - Tipos calculados para el jugador DORIS: ['Regular']
+2024-09-08 03:34:52,680 - info_logger - INFO - Puntos calculados para el jugador JESSICA PEGUERO: [1]
+2024-09-08 03:34:52,680 - info_logger - INFO - Tipos calculados para el jugador JESSICA PEGUERO: ['Regular']
+2024-09-08 03:34:52,681 - info_logger - INFO - Puntos calculados para el jugador CRISTY: [1, 1]
+2024-09-08 03:34:52,681 - info_logger - INFO - Tipos calculados para el jugador CRISTY: ['Regular', 'Regular']
+2024-09-08 03:34:52,697 - info_logger - INFO - Puntos eliminados para el jugador YENNIFER
+2024-09-08 03:34:52,697 - info_logger - INFO - Puntos calculados para el jugador YENNIFER: [0]
+2024-09-08 03:34:52,698 - info_logger - INFO - Tipos calculados para el jugador YENNIFER: ['Jugador']
+2024-09-08 03:34:52,706 - info_logger - INFO - Resultados procesados:                Jugador  Puntos
+0                SAMMY       2
+1         HIJA DEL REY       1
+2                 IDEY       2
+3              MARISOL      11
+4                 YANE       1
+5                 BERE       7
+6               BRENDA       6
+7             BRIGITTE       1
+8      MARIE KREATIONS       1
+9                  KIM       3
+10                YADI       3
+11     HILLARY NICHOLE       2
+12               DIANA       1
+13             YULIANA       1
+14               BUENO       2
+15                 ALE       1
+16         JADE ARAGON       1
+17               CHAYO      11
+18              ANDREA       1
+19         BLANKY RUIZ       4
+20     ANGELICA CHAVEZ       2
+21        AHSLIN GIRON       1
+22          ISIS LOPEZ       1
+23             PAUSINI       1
+24              SARAHI       1
+25           LIZ BRAVO       5
+26              KARINA       1
+27      GEORGINA RIZZO       3
+28  DENISSE VALENZUELA       8
+29                ROSS       1
+30      LUISANA ROMERO       4
+31               DORIS       1
+32     JESSICA PEGUERO       1
+33              CRISTY       2
+34            YENNIFER       0
+2024-09-08 03:34:52,710 - info_logger - INFO - Data procesados: {'SAMMY': ['S**%', '1**1'], 'HIJA DEL REY': ['L**D'], 'IDEY': ['S***1', '1***5'], 'MARISOL': ['E**$', 'M**$', 'S**5', 'G**O', 'E**8', 'N**!', 'E**2 / (NUEVO)'], 'YANE': ['Y**E'], 'BERE': ['@**$', 'B**O', 'T**S', 'B**@', 'E**9', 'F**9', 'F**¥'], 'BRENDA': ['B**2', 'M**Y', 'M**R', 'D**9', 'A**M', 'C**3'], 'BRIGITTE': ['P**5'], 'MARIE KREATIONS': ['K**7'], 'KIM': ['B**C', 'O**P', 'G**G'], 'YADI': ['Y**I', '0**0', 'V**E'], 'HILLARY NICHOLE': ['H**R', 'C**A'], 'DIANA': ['R**A'], 'YULIANA': ['Y**A'], 'BUENO': ['S**7', 'B**A'], 'ALE': ['H**7'], 'JADE ARAGON': ['J**&'], 'CHAYO': ['L**5', '1**1', 'V**8', 'J**5', '1**8', 'C**Z', 'A***Z / (NUEVO)'], 'ANDREA': ['E**S'], 'BLANKY RUIZ': ['B**Z', 'R**Z', 'Z**R', '1**9'], 'ANGELICA CHAVEZ': ['A**C', '1**1'], 'AHSLIN GIRON': ['G**&'], 'ISIS LOPEZ': ['F**2'], 'PAUSINI': ['R**0'], 'SARAHI': ['5**3'], 'LIZ BRAVO': ['A**#', 'F**6', 'N**S', 'A**1', 'M**E'], 'KARINA': ['K**A'], 'GEORGINA RIZZO': ['1**4', 'R**3', 'P**6'], 'DENISSE VALENZUELA': ['D**2', 'G**', 'L**A', 'V**A / (NUEVO)'], 'ROSS': ['S**7'], 'LUISANA ROMERO': ['E**A', 'R**A', 'J**4', 'C**A'], 'DORIS': ['P**V'], 'JESSICA PEGUERO': ['J**E'], 'CRISTY': ['C**2', '$**2'], 'YENNIFER': ['JUGADORA']}
+2024-09-08 03:34:52,711 - info_logger - INFO - Tipos procesados: {'SAMMY': {'Regular': 2}, 'HIJA DEL REY': {'Regular': 1}, 'IDEY': {'Regular': 2}, 'MARISOL': {'Regular': 6, 'Nuevo': 5}, 'YANE': {'Regular': 1}, 'BERE': {'Regular': 7}, 'BRENDA': {'Regular': 6}, 'BRIGITTE': {'Regular': 1}, 'MARIE KREATIONS': {'Regular': 1}, 'KIM': {'Regular': 3}, 'YADI': {'Regular': 3}, 'HILLARY NICHOLE': {'Regular': 2}, 'DIANA': {'Regular': 1}, 'YULIANA': {'Regular': 1}, 'BUENO': {'Regular': 2}, 'ALE': {'Regular': 1}, 'JADE ARAGON': {'Regular': 1}, 'CHAYO': {'Regular': 6, 'Nuevo': 5}, 'ANDREA': {'Regular': 1}, 'BLANKY RUIZ': {'Regular': 4}, 'ANGELICA CHAVEZ': {'Regular': 2}, 'AHSLIN GIRON': {'Regular': 1}, 'ISIS LOPEZ': {'Regular': 1}, 'PAUSINI': {'Regular': 1}, 'SARAHI': {'Regular': 1}, 'LIZ BRAVO': {'Regular': 5}, 'KARINA': {'Regular': 1}, 'GEORGINA RIZZO': {'Regular': 3}, 'DENISSE VALENZUELA': {'Regular': 3, 'Nuevo': 5}, 'ROSS': {'Regular': 1}, 'LUISANA ROMERO': {'Regular': 4}, 'DORIS': {'Regular': 1}, 'JESSICA PEGUERO': {'Regular': 1}, 'CRISTY': {'Regular': 2}, 'YENNIFER': {'Jugador': 0}}
+2024-09-08 03:34:52,714 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:34:52,727 - info_logger - INFO - DataFrame guardado correctamente en data/resultados.csv
+2024-09-08 03:34:52,745 - info_logger - INFO - DataFrame guardado correctamente en data/logs.csv
+2024-09-08 03:34:52,746 - info_logger - INFO - Log creado correctamente en data/logs.csv
+2024-09-08 03:34:52,746 - info_logger - INFO - Resultados actualizados correctamente.
+2024-09-08 03:35:07,566 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:35:07,571 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 03:38:49,774 - info_logger - INFO - Puntos calculados para el jugador KEYLA PEREZ: [1]
+2024-09-08 03:38:49,775 - info_logger - INFO - Tipos calculados para el jugador KEYLA PEREZ: ['Regular']
+2024-09-08 03:38:49,775 - info_logger - INFO - Puntos calculados para el jugador GEORGINA RIZZO: [1]
+2024-09-08 03:38:49,775 - info_logger - INFO - Tipos calculados para el jugador GEORGINA RIZZO: ['Regular']
+2024-09-08 03:38:49,776 - info_logger - INFO - Puntos calculados para el jugador MAURA OCHOA: [1]
+2024-09-08 03:38:49,776 - info_logger - INFO - Tipos calculados para el jugador MAURA OCHOA: ['Regular']
+2024-09-08 03:38:49,776 - info_logger - INFO - Puntos calculados para el jugador YADI: [1]
+2024-09-08 03:38:49,776 - info_logger - INFO - Tipos calculados para el jugador YADI: ['Regular']
+2024-09-08 03:38:49,777 - info_logger - INFO - Puntos calculados para el jugador LUISANA ROMERO: [1]
+2024-09-08 03:38:49,777 - info_logger - INFO - Tipos calculados para el jugador LUISANA ROMERO: ['Regular']
+2024-09-08 03:38:49,777 - info_logger - INFO - Puntos calculados para el jugador BERE: [1]
+2024-09-08 03:38:49,778 - info_logger - INFO - Tipos calculados para el jugador BERE: ['Regular']
+2024-09-08 03:38:49,778 - info_logger - INFO - Puntos calculados para el jugador PAUSINI: [1]
+2024-09-08 03:38:49,778 - info_logger - INFO - Tipos calculados para el jugador PAUSINI: ['Regular']
+2024-09-08 03:38:49,779 - info_logger - INFO - Puntos calculados para el jugador IDEY: [1]
+2024-09-08 03:38:49,779 - info_logger - INFO - Tipos calculados para el jugador IDEY: ['Regular']
+2024-09-08 03:38:49,779 - info_logger - INFO - Puntos calculados para el jugador OSMANY: [1, 1, 1]
+2024-09-08 03:38:49,779 - info_logger - INFO - Tipos calculados para el jugador OSMANY: ['Regular', 'Regular', 'Regular']
+2024-09-08 03:38:49,787 - info_logger - INFO - Resultados procesados:           Jugador  Puntos
+0     KEYLA PEREZ       1
+1  GEORGINA RIZZO       1
+2     MAURA OCHOA       1
+3            YADI       1
+4  LUISANA ROMERO       1
+5            BERE       1
+6         PAUSINI       1
+7            IDEY       1
+8          OSMANY       3
+2024-09-08 03:38:49,789 - info_logger - INFO - Data procesados: {'KEYLA PEREZ': ['SH'], 'GEORGINA RIZZO': ['14'], 'MAURA OCHOA': ['KY'], 'YADI': ['YI'], 'LUISANA ROMERO': ['$$'], 'BERE': ['B8'], 'PAUSINI': ['PO'], 'IDEY': ['FB'], 'OSMANY': ['GS', 'LA', 'UH']}
+2024-09-08 03:38:49,789 - info_logger - INFO - Tipos procesados: {'KEYLA PEREZ': {'Regular': 1}, 'GEORGINA RIZZO': {'Regular': 1}, 'MAURA OCHOA': {'Regular': 1}, 'YADI': {'Regular': 1}, 'LUISANA ROMERO': {'Regular': 1}, 'BERE': {'Regular': 1}, 'PAUSINI': {'Regular': 1}, 'IDEY': {'Regular': 1}, 'OSMANY': {'Regular': 3}}
+2024-09-08 03:38:49,793 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:38:49,805 - info_logger - INFO - DataFrame guardado correctamente en data/resultados.csv
+2024-09-08 03:38:49,821 - info_logger - INFO - DataFrame guardado correctamente en data/logs.csv
+2024-09-08 03:38:49,821 - info_logger - INFO - Log creado correctamente en data/logs.csv
+2024-09-08 03:38:49,822 - info_logger - INFO - Resultados actualizados correctamente.
+2024-09-08 03:38:58,745 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:38:58,748 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 03:39:06,798 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:39:07,166 - info_logger - INFO - Archivo de resultados generado y listo para descargar: data/results/Resultados.2024-09-08.xlsx
+2024-09-08 03:50:44,505 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:50:44,836 - info_logger - INFO - Archivo de resultados generado y listo para descargar: data/results/Resultados.2024-09-08.xlsx
+2024-09-08 03:50:50,725 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 03:50:50,729 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 20:04:41,831 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 20:04:41,923 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 20:22:31,609 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 20:22:31,613 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 20:22:31,807 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 20:22:31,810 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 20:23:50,627 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 20:23:50,637 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 20:23:51,014 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 20:23:51,017 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 20:23:51,174 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 20:23:51,177 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 20:23:52,915 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 20:23:52,918 - info_logger - INFO - Resultados obtenidos y procesados correctamente.
+2024-09-08 20:23:53,074 - info_logger - INFO - DataFrame cargado correctamente desde data/resultados.csv
+2024-09-08 20:23:53,077 - info_logger - INFO - Resultados obtenidos y procesados correctamente.

@@ -1,10 +1,98 @@
+if (document.readyState !== 'loading') {
+    console.log('document is already ready, just execute code here');
+    inicializarEventos(); // Llama a la función que inicializa los eventos
+} else {
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log('document was not ready, place code here');
+        inicializarEventos(); // Llama a la función que inicializa los eventos
+    });
+}
+
+function inicializarEventos() {
+    // Verifica y adjunta eventos solo si los elementos existen
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+        contactElement.addEventListener('click', function () {
+            document.getElementById('contact').style.display = 'block';
+            mostrarResultado(); // Llama a la función cuando se hace clic y el modal se muestra
+        });
+    } else {
+        console.error('El elemento "contact" no se encuentra en el DOM.');
+    }
+
+    // Verifica que el botón de ejecución y otros elementos existan
+    const ejecutarBtn = document.querySelector('button[onclick="ejecutarProcesamiento()"]');
+    if (ejecutarBtn) {
+        ejecutarBtn.addEventListener('click', ejecutarProcesamiento);
+    }
+
+    const descargarBtn = document.querySelector('button[onclick="descargarResultados()"]');
+    if (descargarBtn) {
+        descargarBtn.addEventListener('click', descargarResultados);
+    }
+}
+
+async function mostrarResultado() {
+    const tableBody = document.getElementById('resultados-table-body');
+    if (!tableBody) {
+        console.error('El elemento "resultados-table-body" no se encuentra en el DOM.');
+        return;
+    }
+
+    try {
+        const response = await fetch(`/get_latest_results?timestamp=${new Date().getTime()}`);
+        console.log("Respuesta del servidor:", response);
+
+        if (!response.ok) {
+            throw new Error('Error al obtener los resultados.');
+        }
+
+        const data = await response.json();
+        console.log("Datos recibidos:", data);
+
+        if (data.status === 'success') {
+            // Limpiar las filas anteriores
+            tableBody.innerHTML = '';
+
+            // Crear nuevas filas para cada dato recibido
+            data.data.forEach(row => {
+                const tr = document.createElement('tr'); // Crear una fila
+                const tdJugador = document.createElement('td'); // Crear una celda para 'Jugador'
+                const tdPuntos = document.createElement('td'); // Crear una celda para 'Puntos'
+                
+                tdJugador.textContent = row.Jugador; // Asignar texto a la celda 'Jugador'
+                tdPuntos.textContent = row.Puntos; // Asignar texto a la celda 'Puntos'
+
+                tr.appendChild(tdJugador); // Agregar la celda 'Jugador' a la fila
+                tr.appendChild(tdPuntos); // Agregar la celda 'Puntos' a la fila
+
+                tableBody.appendChild(tr); // Agregar la fila al cuerpo de la tabla
+            });
+
+            console.log("Tabla actualizada con los datos más recientes:", tableBody.innerHTML);
+        } else {
+            throw new Error(data.message || 'Error al obtener los resultados.');
+        }
+    } catch (error) {
+        console.error('Error fetching latest results:', error);
+        // Mostrar mensajes de error en un lugar separado, como un div debajo de la tabla
+        document.getElementById('resultado').innerText = 'Error al obtener los resultados.';
+    }
+}
+
+
 async function ejecutarProcesamiento() {
     let puntos = document.getElementById('puntosInput').value;
 
-    // Limpieza de los datos: eliminar líneas vacías y espacios innecesarios
     puntos = puntos.split('\n').map(line => line.trim()).filter(line => line !== '').join('\n');
 
-    console.log("Datos enviados después de limpieza:", puntos); // Log para verificar datos
+    if (puntos === '') {
+        console.warn('No se han proporcionado puntos para procesar.');
+        document.getElementById('resultado').innerText = 'No se han proporcionado puntos para procesar.';
+        return;
+    }
+
+    console.log("Datos enviados después de limpieza:", puntos);
 
     try {
         const response = await fetch('/update_results', {
@@ -15,48 +103,19 @@ async function ejecutarProcesamiento() {
             body: JSON.stringify({ results: puntos }),
         });
 
+        if (!response.ok) {
+            throw new Error('Error en la respuesta del servidor.');
+        }
+
         const data = await response.json();
-        if (response.ok && data.status === 'success') {
+        if (data.status === 'success') {
             document.getElementById('resultado').innerText = 'Resultados procesados correctamente.';
-            
-            // Llama a mostrarResultado una vez que la actualización sea exitosa
-            // await mostrarResultado();
         } else {
             document.getElementById('resultado').innerText = data.message || 'Error al procesar los resultados.';
         }
     } catch (error) {
         console.error('Error al procesar los resultados:', error);
         document.getElementById('resultado').innerText = 'Error al procesar los resultados.';
-    }
-}
-
-async function mostrarResultado() {
-    try {
-        const response = await fetch(`/get_latest_results?timestamp=${new Date().getTime()}`);
-        console.log("Respuesta del servidor:", response);
-
-        const data = await response.json();
-        console.log("Datos recibidos:", data); // Verifica el contenido exacto de la respuesta
-
-        if (response.ok && data.status === 'success') {
-            const tableBody = document.getElementById('resultados-table-body');
-            tableBody.innerHTML = ''; // Limpiar la tabla antes de agregar nuevos resultados
-            
-            data.data.forEach(row => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `<td>${row.Jugador}</td><td>${row.Puntos}</td>`;
-                tableBody.appendChild(tr);
-            });
-            
-            // Añade un log para confirmar la actualización del DOM
-            console.log("Tabla actualizada con los datos más recientes:", tableBody.innerHTML);
-        } else {
-            console.error("Error en la respuesta del servidor:", data); // Log para errores específicos
-            document.getElementById('resultado').innerText = data.message || 'Error al obtener los resultados.';
-        }
-    } catch (error) {
-        console.error('Error fetching latest results:', error);
-        document.getElementById('resultado').innerText = 'Error al obtener los resultados_1';
     }
 }
 
