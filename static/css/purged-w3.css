@@ -1,0 +1,49 @@
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+
+
+/* Extract from normalize.css */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+menu{display:block}
+b{font-weight:bolder}
+button,textarea{font:inherit;margin:0}
+button{overflow:visible}button{text-transform:none}
+button{-webkit-appearance:button}
+button::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring{outline:1px dotted ButtonText}textarea{overflow:auto}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+
+
+/* End extract */
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+h1{font-size:36px}h5{font-size:18px}
+h1,h5{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}
+.w3-table{border-collapse:collapse;border-spacing:0;width:100%;display:table}
+.w3-bordered tr{border-bottom:1px solid #ddd}.w3-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.w3-table th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.w3-table th:first-child{padding-left:16px}
+.w3-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.w3-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.w3-button:disabled{cursor:not-allowed;opacity:0.3}:disabled *{pointer-events:none}
+.w3-display-container{position:relative}
+.w3-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.w3-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.w3-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.w3-container:after,.w3-container:before{content:"";display:table;clear:both}
+@media (max-width:600px){.w3-modal-content{margin:0 10px;width:auto!important}.w3-modal{padding-top:30px}}
+@media (max-width:768px){.w3-modal-content{width:500px}.w3-modal{padding-top:50px}}
+@media (min-width:993px){.w3-modal-content{width:900px}}
+.w3-display-topleft{position:absolute;left:0;top:0}.w3-display-topright{position:absolute;right:0;top:0}
+.w3-display-bottomleft{position:absolute;left:0;bottom:0}
+.w3-display-middle{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%)}
+.w3-container{padding:0.01em 16px}@keyframes w3-spin{0%{transform:rotate(0deg)}100%{transform:rotate(359deg)}}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}@keyframes opac{from{opacity:0} to{opacity:1}}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.w3-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}.w3-large{font-size:18px!important}
+.w3-xlarge{font-size:24px!important}.w3-jumbo{font-size:64px!important}.w3-border{border:1px solid #ccc!important}
+.w3-padding-16{padding-top:16px!important;padding-bottom:16px!important}
+.w3-button:hover{color:#000!important;background-color:#ccc!important}
+
+/* Colors */
+.w3-white{color:#000!important;background-color:#fff!important}
+.w3-black{color:#fff!important;background-color:#000!important}
+.w3-text-white{color:#fff!important}
+
+/* purgecss --css static/css/w3.css --content templates/index.html --output static/css/purged-w3.css */
