@@ -13,4 +13,3 @@ function verificarSelectores() {
 }
 
 // Llama a la función para verificar selectores cuando se carga la página
-verificarSelectores();
