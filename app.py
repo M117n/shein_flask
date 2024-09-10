@@ -12,6 +12,7 @@ RESULTS_DIRECTORY = os.path.join('data', 'resultados.csv')
 LOG_DIRECTORY = os.path.join('data', 'logs.csv')
 INFO_LOGGER = os.path.join(os.path.join('data', 'system_logs'), 'info.log')
 DEBUG_LOGGER = os.path.join(os.path.join('data', 'system_logs'), 'debug.log')
+RESULTS_LIST_HISTORY = os.path.join('data', 'results')
 
 # Loggers
 logger_info = logging.getLogger('info_logger')
@@ -159,6 +160,12 @@ def log_statistic():
 
     except Exception as e:
         logger_debug.error("Error creando estadística: {e}")
+
+
+def get_results_history():
+    list_files_names = [archivo for archivo in os.listdir(RESULTS_LIST_HISTORY) if os.path.isfile(os.path.join(RESULTS_LIST_HISTORY, archivo))]
+
+    return list_files_names
 
 
 def procesar_resultados(texto):

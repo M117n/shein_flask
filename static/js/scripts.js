@@ -9,21 +9,14 @@ if (document.readyState !== 'loading') {
 }
 
 function inicializarEventos() {
-    // Verifica y adjunta eventos solo si los elementos existen
-    const contactElement = document.getElementById('contact');
-    if (contactElement) {
-        contactElement.addEventListener('click', function () {
-            document.getElementById('contact').style.display = 'block';
-            mostrarResultado(); // Llama a la función cuando se hace clic y el modal se muestra
-        });
-    } else {
-        console.error('El elemento "contact" no se encuentra en el DOM.');
-    }
-
-    // Verifica que el botón de ejecución y otros elementos existan
     const ejecutarBtn = document.querySelector('button[onclick="ejecutarProcesamiento()"]');
     if (ejecutarBtn) {
         ejecutarBtn.addEventListener('click', ejecutarProcesamiento);
+    }
+
+    const resultadoBtn = document.querySelector('button[onclick="mostrarResultado()"]');
+    if (resultadoBtn) {
+        resultadoBtn.addEventListener('click', mostrarResultado);
     }
 
     const descargarBtn = document.querySelector('button[onclick="descargarResultados()"]');
@@ -82,6 +75,11 @@ async function mostrarResultado() {
 
 
 async function ejecutarProcesamiento() {
+    if (!confirmarEjecucion()) {
+        console.log('Acción cancelada por el usuario.');
+        return;
+    }
+    
     let puntos = document.getElementById('puntosInput').value;
 
     puntos = puntos.split('\n').map(line => line.trim()).filter(line => line !== '').join('\n');
@@ -117,6 +115,10 @@ async function ejecutarProcesamiento() {
         console.error('Error al procesar los resultados:', error);
         document.getElementById('resultado').innerText = 'Error al procesar los resultados.';
     }
+}
+
+function confirmarEjecucion() {
+    return window.confirm("¿Estás seguro de que deseas ejecutar esta acción? Los cambios serán permanentes.");
 }
 
 function descargarResultados() {
