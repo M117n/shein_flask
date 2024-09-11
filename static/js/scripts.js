@@ -107,6 +107,22 @@ async function ejecutarProcesamiento() {
     }
 }
 
+
+async function deshacerCambios() {
+    fetch('/undo_last_update', {
+        method: 'POST',        
+    }).then(response => response.json()).then(data => {
+        if (data.status == 'success') {
+            alert('El último cambio ha sido deshecho exitosamente.');
+        } else {
+            alert('No se pudo deshacer el cambio: ' + data.message);
+        }
+    }).catch(error => {
+        console.error('Error al intentar deshacer los cambios.', error);
+    });
+}
+
+
 function confirmarEjecucion() {
     return window.confirm("¿Estás seguro de que deseas ejecutar esta acción? Los cambios serán permanentes.");
 }

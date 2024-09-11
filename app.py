@@ -6,13 +6,17 @@ import pandas as pd
 import os
 import datetime
 import logging
-#from flask_cors import CORS
+from collections import deque
 
+# Directories
 RESULTS_DIRECTORY = os.path.join('data', 'resultados.csv')
 LOG_DIRECTORY = os.path.join('data', 'logs.csv')
 INFO_LOGGER = os.path.join(os.path.join('data', 'system_logs'), 'info.log')
 DEBUG_LOGGER = os.path.join(os.path.join('data', 'system_logs'), 'debug.log')
 RESULTS_LIST_HISTORY = os.path.join('data', 'results')
+BACKUP_DIRECTORY = os.path.join('data', '')
+
+history_stack = deque(maxlen=10)
 
 # Loggers
 logger_info = logging.getLogger('info_logger')
@@ -162,10 +166,31 @@ def log_statistic():
         logger_debug.error("Error creando estadística: {e}")
 
 
-def get_results_history():
-    list_files_names = [archivo for archivo in os.listdir(RESULTS_LIST_HISTORY) if os.path.isfile(os.path.join(RESULTS_LIST_HISTORY, archivo))]
+def backup_current_state():
+    try:
+        if os.path.exists(RESULTS_DIRECTORY):
+            df = pd.read_csv(RESULTS_DIRECTORY)
+            history_stack.append(df.copy())
+            logger_info.info("Estado actual respaldado correctamente en la pila.")
+        else:
+            logger_debug.warning("No se encontró un estado previo para respaldar.")
+    except Exception as e:
+        logger_debug.error(f'Error al respaldar el estado actual: {e}')
 
-    return list_files_names
+
+def restore_previous_state():
+    try:
+        if history_stack:
+            previous_df = history_stack.pop()
+            save_df(previous_df, RESULTS_DIRECTORY)
+            logger_info.info("Estado anterior restaurado correctamente desde la pila.")
+            return jsonify({'status': 'success', 'message': 'Estado anterior restaurado exitosamente.'}), 200
+        else:
+            logger_info.warning("No hay mas estados disponibles.")
+            return jsonify({'status': 'error', 'message': 'No hay más estados para deshacer.'}), 404
+    except Exception as e:
+        logger_debug.debug(f'Error al restaurar el estado anterior {e}')
+        return jsonify({'status': 'error', 'message': 'Error al restaurar el estado anterior.'}), 500
 
 
 def procesar_resultados(texto):
@@ -223,6 +248,11 @@ def procesar_resultados(texto):
     except Exception as e:
         logger_debug.error(f"Error processing results: {e}")
         return pd.DataFrame(columns=['Jugador', 'Puntos']), [], [], []
+
+
+@app.route('/undo_last_update', methods=['POST'])
+def undo_last_update():
+    return restore_previous_state()
 
 
 @app.route('/download_latest_results', methods=['GET'])
@@ -316,6 +346,8 @@ def get_latest_results():
 @app.route('/update_results', methods=['POST'])
 def update_results():
     try:
+        backup_current_state()
+        
         content = request.json.get('results', '')
         if not content:
             logger_info.warning("No results provided in the request.")
