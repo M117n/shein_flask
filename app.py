@@ -76,6 +76,7 @@ def delete_points(jugador):
         if os.path.exists(RESULTS_DIRECTORY):
             df = pd.read_csv(RESULTS_DIRECTORY)
             df.loc[df['Jugador'] == jugador, 'Puntos'] = 0
+            df.loc[df['Jugador'] == jugador, 'Victorias'] += 1
             df.to_csv(RESULTS_DIRECTORY, index=False)
             logger_info.info(f"Puntos eliminados para el jugador {jugador}")
         else:
@@ -263,7 +264,7 @@ def download_latest_results():
             logger_info.warning("No hay respuesta disponible para descargar.")
             return jsonify({'status':'error', 'message': 'No hay respuesta disponible para descargar.'}), 404
         
-        final_data = data.groupby('Jugador', as_index=False)['Puntos'].sum()
+        final_data = data.groupby('Jugador', as_index=False)[['Puntos', 'Victorias']].sum()
         final_data = final_data.sort_values('Puntos', ascending=False)
 
         aux_file = f'Resultados.{datetime.date.today()}.xlsx'
@@ -302,10 +303,12 @@ def download_latest_results():
                 cell.border = border
 
         # Ajustar las dimensiones de la columna 'Jugador'
-        ws.column_dimensions['A'].width = 28
+        ws.column_dimensions['A'].width = 28  # 'Jugador' column
+        ws.column_dimensions['B'].width = 15  # 'Puntos' column
+        ws.column_dimensions['C'].width = 15  # 'Victorias' column
 
         # Centrar los valores en la columna 'Puntos'
-        for cell in ws['B']:
+        for cell in ws['B'] + ws['C']:
             cell.alignment = alignment
 
         wb.save(aux_file_path)
@@ -322,14 +325,13 @@ def download_latest_results():
 def get_latest_results():
     try:
         data = load_df(RESULTS_DIRECTORY)
-        # print(f"Datos cargados: {data}")  # Log para verificar los datos cargados
 
         if data.empty:
             logger_info.warning("Error: No hay datos disponibles en el archivo.")
             return jsonify({'status': 'error', 'message': 'No hay resultados disponibles.'}), 404
 
         # Agrupación y ordenación de datos
-        final_data = data.groupby('Jugador', as_index=False)['Puntos'].sum()
+        final_data = data.groupby('Jugador', as_index=False)[['Puntos', 'Victorias']].sum()
         final_data = final_data.sort_values(by='Puntos', ascending=False)
 
         logger_info.info("Resultados obtenidos y procesados correctamente.")
@@ -358,9 +360,10 @@ def update_results():
         new_data['Puntos'] = new_data['Puntos'].astype(int)
         data = load_df(RESULTS_DIRECTORY)
 
-        merged_data = pd.concat([data, new_data], ignore_index=True)
-        final_data = merged_data.groupby('Jugador', as_index=False)['Puntos'].sum()
-        final_data = final_data.sort_values(by='Puntos', ascending=False)
+        final_data = pd.merge(data, new_data, on='Jugador', how='outer', suffixes=('_old', '_new'))
+        final_data['Puntos'] = final_data['Puntos_old'].fillna(0) + final_data['Puntos_new'].fillna(0)
+        final_data['Victorias'] = final_data['Victorias'].fillna(0)
+        final_data = final_data[['Jugador', 'Puntos', 'Victorias']]
 
         save_df(final_data, RESULTS_DIRECTORY)
         create_log(types)

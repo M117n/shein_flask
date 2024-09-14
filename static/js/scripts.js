@@ -27,7 +27,7 @@ async function mostrarResultado() {
         console.log("Respuesta del servidor:", response);
 
         if (!response.ok) {
-            throw new Error('Error al obtener los resultados.');
+            throw new Error('Error al obtener los resultados-1.');
         }
 
         const data = await response.json();
@@ -42,24 +42,27 @@ async function mostrarResultado() {
                 const tr = document.createElement('tr'); // Crear una fila
                 const tdJugador = document.createElement('td'); // Crear una celda para 'Jugador'
                 const tdPuntos = document.createElement('td'); // Crear una celda para 'Puntos'
-                
+                const tdVictorias = document.createElement('td'); // crear celda victorias
+
                 tdJugador.textContent = row.Jugador; // Asignar texto a la celda 'Jugador'
                 tdPuntos.textContent = row.Puntos; // Asignar texto a la celda 'Puntos'
+                tdVictorias.textContent = row.Victorias;
 
                 tr.appendChild(tdJugador); // Agregar la celda 'Jugador' a la fila
                 tr.appendChild(tdPuntos); // Agregar la celda 'Puntos' a la fila
+                tr.appendChild(tdVictorias);
 
                 tableBody.appendChild(tr); // Agregar la fila al cuerpo de la tabla
             });
 
             console.log("Tabla actualizada con los datos más recientes:", tableBody.innerHTML);
         } else {
-            throw new Error(data.message || 'Error al obtener los resultados.');
+            throw new Error(data.message || 'Error al obtener los resultados-2.');
         }
     } catch (error) {
         console.error('Error fetching latest results:', error);
         // Mostrar mensajes de error en un lugar separado, como un div debajo de la tabla
-        document.getElementById('resultado').innerText = 'Error al obtener los resultados.';
+        document.getElementById('resultado').innerText = 'Error al obtener los resultados-3.';
     }
 }
 
