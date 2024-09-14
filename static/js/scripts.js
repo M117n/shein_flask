@@ -27,7 +27,7 @@ async function mostrarResultado() {
         console.log("Respuesta del servidor:", response);
 
         if (!response.ok) {
-            throw new Error('Error al obtener los resultados-1.');
+            throw new Error('Error al obtener los resultados.');
         }
 
         const data = await response.json();
@@ -42,27 +42,48 @@ async function mostrarResultado() {
                 const tr = document.createElement('tr'); // Crear una fila
                 const tdJugador = document.createElement('td'); // Crear una celda para 'Jugador'
                 const tdPuntos = document.createElement('td'); // Crear una celda para 'Puntos'
-                const tdVictorias = document.createElement('td'); // crear celda victorias
+                const tdVictorias = document.createElement('td'); // Crear una celda para 'Ganados'
+                const tdActions = document.createElement('td'); // Crear una celda para acciones
+                const deleteBtn = document.createElement('button'); // Crear botón 'Eliminar'
 
+                // Hacer celdas editables o no editables
+                tdJugador.contentEditable = true;
+                tdPuntos.contentEditable = true;
+                tdVictorias.contentEditable = false; // No editable porque es calculado
+
+                // Configurar botón 'Eliminar'
+                deleteBtn.textContent = 'Eliminar';
+                deleteBtn.onclick = () => {
+                    if (!confirmarEjecucion()) {
+                        console.log('Acción cancelada por el usuario.');
+                        return;
+                    }
+                    tr.remove();
+                };
+                tdActions.appendChild(deleteBtn);
+
+                // Asignar texto a las celdas
                 tdJugador.textContent = row.Jugador; // Asignar texto a la celda 'Jugador'
-                tdPuntos.textContent = row.Puntos; // Asignar texto a la celda 'Puntos'
-                tdVictorias.textContent = row.Victorias;
+                tdPuntos.textContent = row.Puntos;   // Asignar texto a la celda 'Puntos'
+                tdVictorias.textContent = row.Victorias || 0; // Asignar texto a la celda 'Ganados'
 
-                tr.appendChild(tdJugador); // Agregar la celda 'Jugador' a la fila
-                tr.appendChild(tdPuntos); // Agregar la celda 'Puntos' a la fila
-                tr.appendChild(tdVictorias);
+                // Agregar las celdas a la fila en el orden correcto
+                tr.appendChild(tdJugador);   // Agregar la celda 'Jugador' a la fila
+                tr.appendChild(tdPuntos);    // Agregar la celda 'Puntos' a la fila
+                tr.appendChild(tdVictorias);   // Agregar la celda 'Ganados' a la fila
+                tr.appendChild(tdActions);   // Agregar la celda de acciones a la fila
 
                 tableBody.appendChild(tr); // Agregar la fila al cuerpo de la tabla
             });
 
             console.log("Tabla actualizada con los datos más recientes:", tableBody.innerHTML);
         } else {
-            throw new Error(data.message || 'Error al obtener los resultados-2.');
+            throw new Error(data.message || 'Error al obtener los resultados.');
         }
     } catch (error) {
         console.error('Error fetching latest results:', error);
         // Mostrar mensajes de error en un lugar separado, como un div debajo de la tabla
-        document.getElementById('resultado').innerText = 'Error al obtener los resultados-3.';
+        document.getElementById('resultado').innerText = 'Error al obtener los resultados.';
     }
 }
 
@@ -125,6 +146,36 @@ async function deshacerCambios() {
     });
 }
 
+function guardarCambios() {
+    const tableBody = document.getElementById('resultados-table-body');
+    const rows = tableBody.querySelectorAll('tr');
+    const data = [];
+
+    rows.forEach(row => {
+        const cells = row.querySelectorAll('td');
+        const jugador = cells[0].textContent.trim();
+        const puntos = parseInt(cells[1].textContent.trim());
+        const victorias = parseInt(cells[2].textContent.trim());
+        data.push({ Jugador: jugador, Puntos: puntos, Victorias: victorias });
+    });
+
+    fetch('/update_table', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: data })
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.status === 'success') {
+            alert('Cambios guardados correctamente.');
+        } else {
+            alert('Error al guardar los cambios: ' + result.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error al guardar los cambios:', error);
+    });
+}
 
 function confirmarEjecucion() {
     return window.confirm("¿Estás seguro de que deseas ejecutar esta acción? Los cambios serán permanentes.");

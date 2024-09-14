@@ -373,6 +373,26 @@ def update_results():
     except Exception as e:
         logger_debug.error(f"Error in update_results: {e}")
         return jsonify({'status': 'error', 'message': 'An unexpected error occurred.'}), 500
+    
+
+@app.route('/update_table', methods=['POST'])
+def update_table():
+    try:
+        backup_current_state()
+        data = request.json.get('data', [])
+        if not data:
+            return jsonify({'status': 'error', 'message': 'No data provided.'}), 400
+        
+        df = pd.DataFrame(data)
+        
+        if 'Jugador' not in df.columns or 'Puntos' not in df.columns or 'Victorias' not in df.columns:
+            return jsonify({'status': 'error', 'message': 'Invalid data format.'}), 400
+        
+        save_df(df, RESULTS_DIRECTORY)
+        return jsonify({'status': 'success', 'message': 'Data updated successfully.'}), 200
+    except Exception as e:
+        logger_debug.error(f"Error in update_table: {e}")
+        return jsonify({'status': 'error', 'message': 'An unexpected error occurred.'}), 500
 
 
 if __name__ == '__main__':
