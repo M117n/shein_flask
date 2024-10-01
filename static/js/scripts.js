@@ -49,8 +49,8 @@ async function mostrarResultado() {
                 // Hacer celdas editables o no editables
                 tdJugador.contentEditable = true;
                 tdPuntos.contentEditable = true;
-                tdVictorias.contentEditable = false; // No editable porque es calculado
-
+                tdVictorias.contentEditable = false; 
+                
                 // Configurar botón 'Eliminar'
                 deleteBtn.textContent = 'Eliminar';
                 deleteBtn.onclick = () => {
@@ -71,7 +71,6 @@ async function mostrarResultado() {
                 tr.appendChild(tdJugador);   // Agregar la celda 'Jugador' a la fila
                 tr.appendChild(tdPuntos);    // Agregar la celda 'Puntos' a la fila
                 tr.appendChild(tdVictorias);   // Agregar la celda 'Ganados' a la fila
-                tr.appendChild(tdActions);   // Agregar la celda de acciones a la fila
 
                 tableBody.appendChild(tr); // Agregar la fila al cuerpo de la tabla
             });

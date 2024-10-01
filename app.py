@@ -25,8 +25,8 @@ logger_info.setLevel(logging.INFO)
 logger_debug = logging.getLogger('debug_logger')
 logger_debug.setLevel(logging.DEBUG)
 
-info_handler = logging.FileHandler(INFO_LOGGER)
-debug_handler = logging.FileHandler(DEBUG_LOGGER)
+info_handler = logging.FileHandler(INFO_LOGGER, encoding='utf-8')
+debug_handler = logging.FileHandler(DEBUG_LOGGER, encoding='utf-8')
 
 info_handler.setLevel(logging.INFO)
 debug_handler.setLevel(logging.DEBUG)
