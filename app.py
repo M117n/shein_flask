@@ -7,6 +7,7 @@ import os
 import datetime
 import logging
 from collections import deque
+import re
 
 # Directories
 RESULTS_DIRECTORY = os.path.join('data', 'resultados.csv')
@@ -25,8 +26,8 @@ logger_info.setLevel(logging.INFO)
 logger_debug = logging.getLogger('debug_logger')
 logger_debug.setLevel(logging.DEBUG)
 
-info_handler = logging.FileHandler(INFO_LOGGER, encoding='utf-8')
-debug_handler = logging.FileHandler(DEBUG_LOGGER, encoding='utf-8')
+info_handler = logging.FileHandler(INFO_LOGGER, encoding='utf-8', errors='replace')
+debug_handler = logging.FileHandler(DEBUG_LOGGER, encoding='utf-8', errors='replace')
 
 info_handler.setLevel(logging.INFO)
 debug_handler.setLevel(logging.DEBUG)
@@ -193,27 +194,43 @@ def restore_previous_state():
         logger_debug.debug(f'Error al restaurar el estado anterior {e}')
         return jsonify({'status': 'error', 'message': 'Error al restaurar el estado anterior.'}), 500
 
+def limpiar_texto(texto):
+    """
+    Removes unwanted Unicode characters from the input text.
+    """
+    # Define unwanted characters (e.g., Zero Width Space, Byte Order Mark, Word Joiner)
+    unwanted_chars = ['\u200B', '\uFEFF', '\u2060']
+    for char in unwanted_chars:
+        texto = texto.replace(char, '')
+    return texto
 
 def procesar_resultados(texto):
     try:
+        texto = limpiar_texto(texto)
         data = {}
         jugador_actual = None
         lineas = texto.splitlines()
 
-        for linea in lineas:
-            linea = linea.strip().upper()
-            # Identificar un nuevo jugador si la línea no empieza con guion y no está vacía
-            if linea and not linea.startswith('-'):
-                jugador_actual = linea
-                data[jugador_actual] = []
-            # Si hay un jugador actual, asociar jugadas correctamente
-            elif linea.startswith('-') and jugador_actual:
-                jugada = linea.replace('-', '').strip()  # Limpiar guion y espacios
-                if jugada:  # Asegurarse de que no es una línea vacía después de limpiar
-                    data[jugador_actual].append(jugada)
-            else:
-                # Mensaje de depuración para formato inesperado
-                logger_debug.warning(f"Formato inesperado o jugador actual no definido: '{linea}'")
+        for idx, linea in enumerate(lineas, start=1):
+                original_line = linea  # Save the original line for logging
+                linea = linea.strip().upper()
+                logger_debug.debug(f"Processing line {idx}: '{original_line}' -> '{linea}'")
+
+                if re.match(r'^-', linea):
+                    if jugador_actual:
+                        # Remove the first hyphen and any leading characters
+                        jugada = linea.lstrip('-').strip()
+                        if jugada:
+                            data[jugador_actual].append(jugada)
+                            logger_debug.debug(f"Added jugada '{jugada}' to player '{jugador_actual}'")
+                    else:
+                        logger_debug.warning(f"Jugada found without a current player at line {idx}: '{linea}'")
+                elif linea:
+                    jugador_actual = linea
+                    data[jugador_actual] = []
+                    logger_debug.debug(f"Identified new player: '{jugador_actual}'")
+                else:
+                    logger_debug.warning(f"Empty or unexpected format at line {idx}: '{linea}'")
 
         # Si no se encontraron jugadores, retorna un DataFrame vacío
         if not data:
