@@ -71,6 +71,7 @@ async function mostrarResultado() {
                 tr.appendChild(tdJugador);   // Agregar la celda 'Jugador' a la fila
                 tr.appendChild(tdPuntos);    // Agregar la celda 'Puntos' a la fila
                 tr.appendChild(tdVictorias);   // Agregar la celda 'Ganados' a la fila
+                tr.appendChild(tdActions);
 
                 tableBody.appendChild(tr); // Agregar la fila al cuerpo de la tabla
             });
